@@ -293,8 +293,8 @@ def fig13_boxplot_models():
     groups = [("(A) 도심형", "생산 공정", 5.5, 5.9, 6.6, 1.1, NAVY),
               ("(A) 도심형", "차량 충전", 6.8, 7.5, 8.7, 1.9, BLUE),
               ("(B) 마더 스테이션", "생산 공정", 4.5, 5.2, 6.7, 2.2, NAVY),
-              ("(B) 마더 스테이션", "TT 충전(85%)", 7.6, 8.4, 10.2, 2.7, GRAY),
-              ("(B) 마더 스테이션", "차량 충전(15%)", 9.3, 10.4, 12.8, 3.4, ORANGE)]
+              ("(B) 마더 스테이션", "TT 충전(85%)", 7.6, 8.4, 10.2, 2.6, GRAY),
+              ("(B) 마더 스테이션", "차량 충전(15%)", 9.3, 10.4, 12.8, 3.5, ORANGE)]
     xs = [1, 2, 3.6, 4.6, 5.6]
     fig, ax = plt.subplots(figsize=(10, 4.8))
     for x, (_, proc, q1, med, q3, iqr, c) in zip(xs, groups):
@@ -654,7 +654,7 @@ def fig15_ktc_verification():
     ax.legend(loc="lower right", frameon=False, fontsize=9.5)
     title(ax, f"KTC 공인시험성적서 대비 모니터링 데이터 교차 검증 (평균 오차 {STATS['ktc']['mean_abs_err']}%)")
     fig.text(0.01, -0.03, "※ KTC: GT2025-00687, 2025.02.13~08.04(4,144 h). 모니터링: 주 단위 집계 2025.02.10~08.03. "
-             "제2계열 설비와 칠러(LP_HP)는 측정 범위·채널 정의 차이로 비교에서 제외", fontsize=8.3, color=GRAY)
+             "측정 채널 범위가 동일한 7개 설비 및 수소 생산량 비교", fontsize=8.3, color=GRAY)
     save(fig, "fig15_ktc_verification.png")
 
 
