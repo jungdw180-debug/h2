@@ -119,7 +119,7 @@ def fig01_monitoring_system():
 
 
 # ================================================================ 2차년도: 43주 분석
-def fig05_weekly_process_kwh():
+def fig06_weekly_process_kwh():
     x = np.arange(len(W))
     fig, ax = plt.subplots(figsize=(10, 4.6))
     bottom = np.zeros(len(W))
@@ -140,10 +140,10 @@ def fig05_weekly_process_kwh():
     h1, l1 = ax.get_legend_handles_labels(); h2, l2 = ax2.get_legend_handles_labels()
     ax.legend(h1 + h2, l1 + l2, loc="upper left", ncol=4, frameon=False, fontsize=9.5)
     title(ax, "주차별 공정별 에너지 사용량 및 수소 생산량 (2024.12.30 ~ 2025.10.26, 43주)")
-    save(fig, "fig05_weekly_process_kwh.png")
+    save(fig, "fig06_weekly_process_kwh.png")
 
 
-def fig06_process_share():
+def fig07_process_share():
     kwh = {p: kwh_sum(W, PROCESS[p]).sum() for p in PROCESS}
     sec = {p: sec_sum(W, PROCESS[p]).mean() for p in PROCESS}
     kt, st = sum(kwh.values()), sum(sec.values())
@@ -172,10 +172,10 @@ def fig06_process_share():
     title(ax, "공정별 에너지 소비 비중 vs SEC 비중 (43주)")
     fig.text(0.01, -0.04, "※ 공정 SEC = 공정 내 설비별 SEC의 합(주간 평균). 생산: 개질기·개질기 칠러 / 압축: 압축기·압축기용 냉각기 / 충전: 메인·서브 칠러",
              fontsize=8, color=GRAY)
-    save(fig, "fig06_process_share.png")
+    save(fig, "fig07_process_share.png")
 
 
-def fig07_process_sec_vs_throughput():
+def fig08_process_sec_vs_throughput():
     cases = [("생산", W["Hydrogen_Production"], "주간 수소 생산량 (kg)"),
              ("압축", W["Hydrogen_Production"], "주간 수소 생산량 (kg)"),
              ("충전", W["Car_Charging_kg"], "주간 차량 충전량 (kg)")]
@@ -195,10 +195,10 @@ def fig07_process_sec_vs_throughput():
     axes[0].set_ylabel("공정 SEC (kWh/kgH$_2$)")
     fig.suptitle("수소 처리량에 따른 공정별 SEC 변화 (43주, 주간 단위)", x=0.01, ha="left", fontsize=13, color=NAVY)
     fig.tight_layout()
-    save(fig, "fig07_process_sec_vs_throughput.png")
+    save(fig, "fig08_process_sec_vs_throughput.png")
 
 
-def fig08_equipment_kwh():
+def fig09_equipment_kwh():
     vals = {g: kwh_sum(W, eqs).sum() for g, eqs in GROUPS.items()}
     total = sum(vals.values())
     STATS["equipment_kwh"] = {g: (round(v, 1), round(v / total * 100, 1)) for g, v in vals.items()}
@@ -216,10 +216,10 @@ def fig08_equipment_kwh():
     ax.legend(handles=[Patch(color=NAVY, label="압축기"), Patch(color=BLUE, label="냉각기·서브 칠러"),
                        Patch(color=ORANGE, label="메인 칠러(충전)")], loc="lower right", frameon=False, fontsize=9.5)
     title(ax, "핵심 설비별 누적 에너지 사용량 (43주)")
-    save(fig, "fig08_equipment_kwh.png")
+    save(fig, "fig09_equipment_kwh.png")
 
 
-def fig09_equipment_sec():
+def fig10_equipment_sec():
     order = ["고압압축기", "저압압축기", "중압압축기", "압축기용 냉각기", "서브 칠러", "메인 칠러"]
     data = [sec_sum(W, GROUPS[g]).dropna().values for g in order]
     means = [d.mean() for d in data]
@@ -246,10 +246,10 @@ def fig09_equipment_sec():
     ax.plot([], [], marker="D", color="white", mec=DARK, ls="none", label="평균")
     ax.legend(loc="upper left", frameon=False, fontsize=9.5)
     title(ax, "핵심 설비별 단위 수소 처리량당 에너지 사용량(SEC) 분포 (43주)")
-    save(fig, "fig09_equipment_sec.png")
+    save(fig, "fig10_equipment_sec.png")
 
 
-def fig10_main_chiller_standby():
+def fig11_main_chiller_standby():
     c = HOURLY["칠러_PCHE"]
     night = c[(c.index.hour >= 20) | (c.index.hour < 8)]
     day = c[(c.index.hour >= 8) & (c.index.hour < 19)]
@@ -285,35 +285,37 @@ def fig10_main_chiller_standby():
     fig.text(0.01, -0.03, f"※ 데이터: {STATS['chiller_hourly']['period']} 시간 단위 계측. 주간(08~19시) 평균 {day.mean():.1f} kWh/h, 최대 {c.max():.1f} kWh/h",
              fontsize=8.5, color=GRAY)
     fig.tight_layout()
-    save(fig, "fig10_main_chiller_standby.png")
+    save(fig, "fig11_main_chiller_standby.png")
 
 
-def fig12_boxplot_models():
-    # 타 충전소(A) 원시 데이터 미보유 -> 보고서 기재 통계값 사용
-    stats = [dict(label="(A) 도심형 전용 충전소\n(연속 충전)", q1=6.8, med=7.5, q3=8.7, iqr=1.9),
-             dict(label="(B) 광역 마더 스테이션\n(간헐 충전)", q1=9.3, med=10.4, q3=12.8, iqr=3.4)]
-    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(9, 4.4), gridspec_kw=dict(width_ratios=[1.7, 1]))
-    for i, s in enumerate(stats, 1):
-        c = BLUE if i == 1 else ORANGE
-        ax.add_patch(plt.Rectangle((i - 0.25, s["q1"]), 0.5, s["q3"] - s["q1"], fc=c, alpha=0.55, ec=c, lw=1.8))
-        ax.hlines(s["med"], i - 0.25, i + 0.25, color=DARK, lw=2.6)
-        ax.text(i + 0.32, s["med"], f"중앙값 {s['med']}", va="center", fontsize=10)
-        ax.text(i + 0.32, s["q3"], f"Q3 {s['q3']}", va="center", fontsize=9, color=GRAY)
-        ax.text(i + 0.32, s["q1"], f"Q1 {s['q1']}", va="center", fontsize=9, color=GRAY)
-        ax.text(i, s["q3"] + 0.9, f"IQR {s['iqr']}", ha="center", fontsize=10.5, color=c)
-    ax.set_xlim(0.4, 2.9); ax.set_ylim(4, 16)
-    ax.set_xticks([1, 2]); ax.set_xticklabels([s["label"] for s in stats])
-    ax.set_ylabel("차량 충전 공정 SEC (kWh/kgH$_2$)")
-    ax.set_title("운영 모델별 충전 공정 SEC 분포 (IQR)", loc="left", fontsize=12.5, color=NAVY, pad=12)
-    ax2.pie([85, 15], colors=[GRAY, ORANGE], startangle=90, counterclock=False, wedgeprops=dict(width=0.38, edgecolor="white"),
-            labels=["튜브트레일러\n출하 85.0%", "차량 충전\n15.0%"], textprops=dict(fontsize=9.5))
-    ax2.set_title("(B) 출하 구성", fontsize=11, color=NAVY)
-    fig.text(0.01, -0.03, "※ 박스: Q1~Q3, 굵은선: 중앙값 (보고서 기재 통계값 기준)", fontsize=8.5, color=GRAY)
-    fig.tight_layout()
-    save(fig, "fig12_boxplot_models.png")
+def fig13_boxplot_models():
+    # 타 충전소(A) 원시 데이터 미보유 -> 2차년도 보고서 기재 통계값 사용
+    groups = [("(A) 도심형", "생산 공정", 5.5, 5.9, 6.6, 1.1, NAVY),
+              ("(A) 도심형", "차량 충전", 6.8, 7.5, 8.7, 1.9, BLUE),
+              ("(B) 마더 스테이션", "생산 공정", 4.5, 5.2, 6.7, 2.2, NAVY),
+              ("(B) 마더 스테이션", "TT 충전(85%)", 7.6, 8.4, 10.2, 2.7, GRAY),
+              ("(B) 마더 스테이션", "차량 충전(15%)", 9.3, 10.4, 12.8, 3.4, ORANGE)]
+    xs = [1, 2, 3.6, 4.6, 5.6]
+    fig, ax = plt.subplots(figsize=(10, 4.8))
+    for x, (_, proc, q1, med, q3, iqr, c) in zip(xs, groups):
+        ax.add_patch(plt.Rectangle((x - 0.3, q1), 0.6, q3 - q1, fc=c, alpha=0.6, ec=c, lw=1.8))
+        ax.hlines(med, x - 0.3, x + 0.3, color=DARK, lw=2.6)
+        ax.text(x + 0.34, med, f"{med}", va="center", fontsize=10)
+        ax.text(x, q3 + 0.35, f"IQR {iqr}", ha="center", fontsize=10, color=ORANGE if proc.startswith("차량 충전(") else DARK)
+    ax.set_xticks(xs); ax.set_xticklabels([g[1] for g in groups], fontsize=10)
+    ax.axvline(2.8, color=LIGHT, lw=1.2)
+    ax.text(1.5, 15.3, "(A) 도심형 전용 충전소\n차량 충전 100% (연속)", ha="center", fontsize=10.5, color=NAVY)
+    ax.text(4.6, 15.3, "(B) 광역 마더 스테이션\nTT 출하 85% · 차량 충전 15% (간헐)", ha="center", fontsize=10.5, color=NAVY)
+    ax.set_xlim(0.4, 6.2); ax.set_ylim(3, 17.2)
+    ax.set_ylabel("공정별 SEC (kWh/kgH$_2$)")
+    ax.annotate("간헐 충전 + 상시 대기전력\n→ 중앙값·산포 최대", xy=(5.27, 12.3), xytext=(3.2, 13.4), fontsize=9.5, color=ORANGE,
+                arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1.3))
+    title(ax, "운영 모델별 공정 SEC 분포 비교 (Box Plot, IQR)")
+    fig.text(0.01, -0.03, "※ 박스: Q1~Q3, 굵은선·숫자: 중앙값 (2차년도 분석 통계값)", fontsize=8.5, color=GRAY)
+    save(fig, "fig13_boxplot_models.png")
 
 
-def fig13_baseline_target():
+def fig14_baseline_target():
     fig, ax = plt.subplots(figsize=(6.8, 4.3))
     ax.bar(["베이스라인\n(상용 22개소 통계)", "최종 목표\n(20% 절감)"], [9.5, 7.6], color=[GRAY, NAVY], width=0.5)
     ax.text(0, 9.65, "9.5", ha="center", fontsize=14)
@@ -322,11 +324,11 @@ def fig13_baseline_target():
     ax.text(0.5, 8.9, "-20%\n(-1.9)", ha="center", fontsize=11, color=ORANGE)
     ax.set_ylim(0, 11.2); ax.set_ylabel("에너지 효율 (kWh/kgH$_2$)")
     title(ax, "사업대상지 에너지 효율 베이스라인 및 목표")
-    save(fig, "fig13_baseline_target.png")
+    save(fig, "fig14_baseline_target.png")
 
 
 # ================================================================ 다음 단계 계획
-def fig14_load_heatmap():
+def fig18_load_heatmap():
     tot = HOURLY.sum(axis=1)
     piv = tot.groupby([tot.index.dayofweek, tot.index.hour]).mean().unstack()
     prof = tot.groupby(tot.index.hour).mean()
@@ -344,15 +346,17 @@ def fig14_load_heatmap():
     ax2.set_ylabel("평균 (kW)"); ax2.set_xlabel("시각 (시)"); ax2.set_xticks(range(0, 24, 2))
     ax2.legend(handles=[Patch(color=ORANGE, label="피크"), Patch(color=BLUE, label="주간"), Patch(color=GRAY, label="오프피크(야간)")],
                loc="upper left", ncol=3, frameon=False, fontsize=9)
-    save(fig, "fig14_load_heatmap.png")
+    save(fig, "fig18_load_heatmap.png")
 
 
 def fig16_three_stage_plan():
     fig, ax = plt.subplots(figsize=(10, 4.6)); ax.axis("off"); ax.set_xlim(0, 10); ax.set_ylim(0, 5)
     ax.text(0, 4.85, "다음 단계 연구개발 내용: 3단계 추진 체계", fontsize=13, color=NAVY, va="top")
     heads = ["1단계\n운영 패턴 정밀 분석", "2단계\n차등 운영 시나리오 수립", "3단계\n현장 적용 및 효과 검증"]
-    lp = STATS["load_profile"]["peak_hours"]
-    bodies = [f"· 원시 데이터 전처리\n  (노이즈 제거·결측 보정)\n· 월·일·요일·시간대별\n  충전 수요 패턴(히트맵)\n· 피크/오프피크 식별\n  (예: {lp} 피크)\n· 유휴시간-대기전력\n  상관관계 규명",
+    prof = HOURLY.sum(axis=1).groupby(HOURLY.index.hour).mean()
+    top = prof.sort_values(ascending=False).index[:4]
+    lp = f"{top.min()}~{top.max() + 1}시"
+    bodies = [f"· 원시 데이터 전처리\n  (노이즈 제거·결측 보정)\n· 월·일·요일·시간대별\n  충전 수요 패턴(히트맵)\n· 피크/오프피크 식별\n  (충전 12~14시,\n   전력 {lp})\n· 유휴시간-대기전력\n  상관관계 규명",
               "· 피크/오프피크별\n  압축기 가동률·부하 분산\n· 설비별 절전 모드 진입\n  로직 설계\n  (Operation→Standby\n   →Deep Sleep)\n· 소비량 시뮬레이션,\n  절감률·절감량 확정",
               "· 고효율 부품·설비 적용\n· Deep Sleep 로직 이식\n· Before/After 비교\n  (메인 칠러 야간\n   162→24 kWh/일)\n· 외부전문가·KTC 입회\n· ROI 평가·표준 운영\n  매뉴얼 작성"]
     xs = [0.1, 3.5, 6.9]
@@ -364,7 +368,7 @@ def fig16_three_stage_plan():
     save(fig, "fig16_three_stage_plan.png")
 
 
-def fig17_state_transition():
+def fig19_state_transition():
     fig, ax = plt.subplots(figsize=(10, 4.6)); ax.axis("off"); ax.set_xlim(0, 10); ax.set_ylim(0, 5.0)
     ax.text(0, 4.95, "설비 유휴시간 기반 단계별 절전 모드 상태 전이(State Transition)", fontsize=13, color=NAVY, va="top")
     st = [("정상 운전\nOperation", "100% 부하 정상 가동", "절감 0%", NAVY),
@@ -381,10 +385,10 @@ def fig17_state_transition():
     ax.annotate("", xy=(1.5, 3.2), xytext=(8.5, 3.2),
                 arrowprops=dict(arrowstyle="-|>", color=GRAY, lw=1.4, connectionstyle="arc3,rad=0.15"))
     ax.text(5.0, 4.15, "충전 수요 발생 시 즉시 복귀", fontsize=9.5, color=GRAY, ha="center")
-    save(fig, "fig17_state_transition.png")
+    save(fig, "fig19_state_transition.png")
 
 
-def fig19_two_track_strategy():
+def fig21_two_track_strategy():
     fig, ax = plt.subplots(figsize=(9.5, 4.6)); ax.axis("off"); ax.set_xlim(0, 10); ax.set_ylim(0, 5)
     ax.text(0, 4.9, "H/W·S/W 투트랙(Two-Track) 융합 연구개발 추진전략", fontsize=13, color=NAVY, va="top")
     box(ax, 0.1, 2.9, 4.4, 1.2, "Track 01  하드웨어 부문\n(참여기관 중심)", fc=BLUE, ec=BLUE, tc="white", fs=11.5)
@@ -393,7 +397,7 @@ def fig19_two_track_strategy():
     box(ax, 5.5, 1.55, 4.4, 1.15, "피크/오프피크 식별\n부하 반응형 차등 제어(Standby·Deep Sleep)", fc="#f4f7fb", ec=LIGHT, fs=10)
     arrow(ax, (2.3, 1.55), (4.0, 0.95), color=ORANGE, lw=2); arrow(ax, (7.7, 1.55), (6.0, 0.95), color=ORANGE, lw=2)
     box(ax, 2.0, 0.05, 6.0, 0.9, "융합 → 에너지 소비량 20% 절감 (9.5 → 7.6 kWh/kgH$_2$)\nKTC 등 공인기관 입회평가로 검증", fc=ORANGE, ec=ORANGE, tc="white", fs=10.5)
-    save(fig, "fig19_two_track_strategy.png")
+    save(fig, "fig21_two_track_strategy.png")
 
 
 # ================================================================ 단계평가 추가 그림
@@ -435,7 +439,7 @@ def fig02_data_pipeline():
     save(fig, "fig02_data_pipeline.png")
 
 
-def fig03_full_period_sec():
+def fig04_full_period_sec():
     d = load_weekly_all()
     ok = d["Hydrogen_Production"] >= 1000
     q = d.groupby(d["start"].dt.to_period("Q")).apply(lambda g: pd.Series(dict(sec=g["kwh"].sum() / g["Hydrogen_Production"].sum(), kg=g["Hydrogen_Production"].sum())))
@@ -466,10 +470,10 @@ def fig03_full_period_sec():
     ax2.legend(handles=[Patch(color=GRAY, label="저가동 주(생산 1,000 kg 미만, SEC 미표시)")], loc="upper left", frameon=False, fontsize=9)
     fig.text(0.01, -0.02, "※ 공정 SEC = 공정 kWh ÷ 주간 총 수소 생산량 (적층 합 = 충전소 SEC). 분기 평균 = 분기 총 kWh ÷ 분기 총 생산량", fontsize=8.5, color=GRAY)
     fig.tight_layout()
-    save(fig, "fig03_full_period_sec.png")
+    save(fig, "fig04_full_period_sec.png")
 
 
-def fig04_monthly_2025_heatmap():
+def fig05_monthly_2025_heatmap():
     m = pd.read_csv(os.path.join(DATA, "monthly_2025_equipment_kwh.csv"), index_col="Month")
     STATS["annual_2025_kwh"] = round(m["Total_Sum"].sum())
     order = [("수소추출기_01", "개질기 #1"), ("칠러_수소추출기01", "개질기 #1 칠러"), ("압축기_LP01", "저압압축기 #1"), ("칠러_LP01", "압축기용 냉각기 #1"),
@@ -492,10 +496,10 @@ def fig04_monthly_2025_heatmap():
     for k, v in (m["Total_Sum"] / 1000).items():
         ax2.text(k, v + 3, f"{v:.0f}", ha="center", fontsize=8.5)
     ax2.set_ylim(0, 190); ax2.set_ylabel("합계 (MWh)"); ax2.set_xticks(range(1, 13)); ax2.set_xticklabels([f"{i}월" for i in range(1, 13)])
-    save(fig, "fig04_monthly_2025_heatmap.png")
+    save(fig, "fig05_monthly_2025_heatmap.png")
 
 
-def fig11_day_night_equipment():
+def fig12_day_night_equipment():
     h = HOURLY.copy(); hr = h.index.hour
     night = (hr >= 20) | (hr < 8); day = (hr >= 8) & (hr < 19)
     h["중압압축기"] = h["압축기_MP01"] + h["압축기_MP02"]
@@ -520,10 +524,10 @@ def fig11_day_night_equipment():
     ax.text(30, y[1] + 0.35, f"차량 충전 설비(고압압축기·서브 칠러)는 야간 정지\n메인 칠러만 주간 대비 {r:.0f}% 수준으로 상시 운전",
             fontsize=9.5, color=ORANGE, va="center")
     title(ax, f"설비별 주간·야간 평균 전력 비교 ({HOURLY.index.min():%Y.%m} ~ {HOURLY.index.max():%Y.%m}, 괄호: 주간 대비 야간 비율)")
-    save(fig, "fig11_day_night_equipment.png")
+    save(fig, "fig12_day_night_equipment.png")
 
 
-def fig15_daytime_2026():
+def fig17_daytime_2026():
     d = pd.read_csv(os.path.join(DATA, "daytime_daily_avg_2026_monthly.csv"), index_col="설비명")
     names = {"수소추출기_02": "개질기 #2", "수소추출기_01": "개질기 #1", "칠러_수소추출기01": "개질기 #1 칠러", "압축기_LP02": "저압압축기 #2",
              "압축기_LP01": "저압압축기 #1", "압축기_MP01": "중압압축기 #1", "압축기_MP02": "중압압축기 #2", "압축기_HP01": "고압압축기",
@@ -540,10 +544,10 @@ def fig15_daytime_2026():
     ax.set_xticks(range(5)); ax.set_xticklabels([f"{m}월" for m in d.columns])
     cb = fig.colorbar(im, ax=ax, fraction=0.04, pad=0.02); cb.set_label("주간(08~18시) 일평균 전력량 (kWh/일)")
     title(ax, "2026년 월별 설비별 주간 일평균 에너지 사용량 (3차년도 지속 모니터링)")
-    save(fig, "fig15_daytime_2026.png")
+    save(fig, "fig17_daytime_2026.png")
 
 
-def fig18_standby_simulation():
+def fig20_standby_simulation():
     c = HOURLY["칠러_PCHE"]; hr = c.index.hour; days = len(c) / 24
     day_e = c[(hr >= 8) & (hr < 20)].sum() / days
     night_e = c[(hr >= 20) | (hr < 8)].sum() / days
@@ -580,14 +584,87 @@ def fig18_standby_simulation():
         ax2.text(0.0, yy, k, fontsize=10, color=GRAY, va="top", transform=ax2.transAxes)
         ax2.text(0.0, yy - 0.065, v, fontsize=11.5 if i < 3 else 9.5, color=NAVY, va="top", transform=ax2.transAxes, linespacing=1.4)
     fig.tight_layout()
-    save(fig, "fig18_standby_simulation.png")
+    save(fig, "fig20_standby_simulation.png")
+
+
+def fig03_station_layout():
+    fig, ax = plt.subplots(figsize=(12, 5.4)); ax.axis("off"); ax.set_xlim(0, 12.2); ax.set_ylim(0, 6)
+    ax.text(0, 5.95, "충주바이오그린수소충전소 수소 공급·압축·저장·충전 계통 및 전력 계측 설비", fontsize=13, color=NAVY, va="top")
+    # 공급부
+    box(ax, 0.05, 4.15, 1.75, 0.8, "튜브트레일러\n(Off-site, 200 bar)", fs=9)
+    box(ax, 0.05, 2.95, 1.75, 0.8, "개질기 #1·#2\n(On-site)", fc=NAVY, ec=NAVY, tc="white", fs=9.5)
+    box(ax, 2.2, 3.55, 1.25, 0.8, "버퍼 탱크\n5,500 L", fs=9)
+    arrow(ax, (1.82, 4.55), (2.18, 4.05)); arrow(ax, (1.82, 3.35), (2.18, 3.85))
+    # 압축·저장 라인
+    line = [("1. 저압압축기\nLP", "7 → 90 bar", "LP Bank\n720 L"),
+            ("2. 중압압축기\nMP", "90 → 200/450 bar", "MP Bank\n720 L"),
+            ("3. 고압압축기\nHP", "450 → 850 bar", "HP Bank\n340 L")]
+    x = 3.8
+    arrow(ax, (3.47, 3.95), (x - 0.02, 3.95))
+    for comp, pr, bank in line:
+        box(ax, x, 3.55, 1.15, 0.8, comp, fc=NAVY, ec=NAVY, tc="white", fs=9)
+        ax.text(x + 0.575, 4.45, pr, ha="center", fontsize=8.5, color=DARK)
+        arrow(ax, (x + 1.17, 3.95), (x + 1.33, 3.95))
+        box(ax, x + 1.35, 3.62, 0.7, 0.66, bank, fs=8)
+        arrow(ax, (x + 2.07, 3.95), (x + 2.23, 3.95))
+        x += 2.25
+    box(ax, x, 3.55, 1.0, 0.8, "충전기\n(Dispenser)", fc=ORANGE, ec=ORANGE, tc="white", fs=9)
+    arrow(ax, (x + 1.02, 3.95), (x + 1.3, 3.95)); ax.text(x + 1.35, 3.95, "수소차\n버스", va="center", fontsize=9, color=DARK)
+    # 냉각 계통
+    box(ax, 0.05, 1.45, 1.75, 0.8, "개질기 칠러", fc=LIGHT, ec=BLUE, fs=9.5)
+    box(ax, 5.1, 1.45, 2.3, 0.8, "4. 압축기용 칠러\n(LP·MP·HP 열교환)", fc=LIGHT, ec=BLUE, fs=9.5)
+    box(ax, 8.4, 1.45, 1.35, 0.8, "5. 서브 칠러\n(충전 보조)", fc=LIGHT, ec=BLUE, fs=9)
+    box(ax, 9.95, 1.45, 1.45, 0.8, "6. 메인 칠러\n(충전기 직결)", fc=ORANGE, ec=ORANGE, tc="white", fs=9)
+    kw = dict(color=BLUE, lw=1.3, ls="--")
+    ax.plot([0.92, 0.92], [2.25, 2.95], **kw)
+    for cx in (4.375, 6.625, 8.875):
+        ax.plot([6.25, cx], [2.25, 3.55], **kw)
+    ax.plot([9.07, x + 0.25], [2.25, 3.55], **kw)
+    ax.plot([10.67, x + 0.75], [2.25, 3.55], color=ORANGE, lw=1.6, ls="--")
+    ax.text(0.05, 0.85, "※ 개질기·압축기·칠러 등 설비별 적산전력계(15채널) 설치, 점선: 냉각 계통", fontsize=8.8, color=GRAY)
+    ax.text(0.05, 0.45, "※ 2025년 5~6월 제2계열(개질기 #2, 저압압축기 #2, 압축기용 칠러 #2·HP) 증설", fontsize=8.8, color=GRAY)
+    save(fig, "fig03_station_layout.png")
+
+
+def fig15_ktc_verification():
+    # KTC 시험성적서 GT2025-00687 (측정 2025.02.13~08.04, 4,144 h) vs 모니터링 주간 데이터(2025.02.10~08.03)
+    d = pd.read_csv(os.path.join(DATA, "weekly_summary.csv")); d["start"] = pd.to_datetime(d["Week"].str[:10])
+    w = d[(d["start"] >= "2025-02-10") & (d["start"] <= "2025-07-28")]
+    items = [("개질기 #1", 130551, ["수소추출기_01"]), ("개질기 칠러", 161646, ["칠러_수소추출기01"]),
+             ("압축기 LP #1", 78836, ["압축기_LP01"]), ("압축기 MP1+MP2", 50115 + 14308, ["압축기(MP1+MP2)"]),
+             ("압축기 HP", 12662, ["압축기_HP01"]), ("메인 칠러(PCHE)", 69205, ["칠러_PCHE"]),
+             ("서브 칠러(MP_PCHE)", 22404, ["칠러_공용_MP_PCHE"])]
+    rows = [(n, k, w[[c + "_kWh" for c in cols]].sum().sum()) for n, k, cols in items]
+    h2 = w["Hydrogen_Production"].sum()
+    errs = [(m - k) / k * 100 for _, k, m in rows] + [(h2 - 76101) / 76101 * 100]
+    STATS["ktc"] = dict(rows={n: (k, round(m)) for n, k, m in rows}, h2=(76101, round(h2)),
+                        err_pct={n: round(e, 1) for (n, _, _), e in zip(rows, errs)}, mean_abs_err=round(np.mean(np.abs(errs)), 1))
+    fig, ax = plt.subplots(figsize=(10, 4.8))
+    names = [r[0] for r in rows] + ["수소 생산량 (kg)"]
+    ktc = [r[1] for r in rows] + [76101]; mon = [r[2] for r in rows] + [h2]
+    y = np.arange(len(names))[::-1]
+    ax.barh(y + 0.19, ktc, height=0.36, color=GRAY, label="KTC 공인 측정값")
+    ax.barh(y - 0.19, mon, height=0.36, color=NAVY, label="모니터링 데이터 (본 과제)")
+    for yy, k, m, e in zip(y, ktc, mon, errs):
+        ax.text(max(k, m) + 2500, yy, f"{e:+.1f}%", va="center", fontsize=10, color=DARK)
+    ax.set_yticks(y); ax.set_yticklabels(names)
+    ax.set_xlabel("누적 전력량 (kWh) / 수소 생산량 (kg)")
+    ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f"{int(v):,}"))
+    ax.set_xlim(0, max(ktc + mon) * 1.18)
+    ax.legend(loc="lower right", frameon=False, fontsize=9.5)
+    title(ax, f"KTC 공인시험성적서 대비 모니터링 데이터 교차 검증 (평균 오차 {STATS['ktc']['mean_abs_err']}%)")
+    fig.text(0.01, -0.03, "※ KTC: GT2025-00687, 2025.02.13~08.04(4,144 h). 모니터링: 주 단위 집계 2025.02.10~08.03. "
+             "제2계열 설비와 칠러(LP_HP)는 측정 범위·채널 정의 차이로 비교에서 제외", fontsize=8.3, color=GRAY)
+    save(fig, "fig15_ktc_verification.png")
+
 
 if __name__ == "__main__":
-    for fn in (fig01_monitoring_system, fig02_data_pipeline, fig03_full_period_sec, fig04_monthly_2025_heatmap,
-               fig05_weekly_process_kwh, fig06_process_share, fig07_process_sec_vs_throughput, fig08_equipment_kwh,
-               fig09_equipment_sec, fig10_main_chiller_standby, fig11_day_night_equipment, fig12_boxplot_models,
-               fig13_baseline_target, fig14_load_heatmap, fig15_daytime_2026, fig16_three_stage_plan,
-               fig17_state_transition, fig18_standby_simulation, fig19_two_track_strategy):
+    for fn in (fig01_monitoring_system, fig02_data_pipeline, fig03_station_layout, fig04_full_period_sec,
+               fig05_monthly_2025_heatmap, fig06_weekly_process_kwh, fig07_process_share, fig08_process_sec_vs_throughput,
+               fig09_equipment_kwh, fig10_equipment_sec, fig11_main_chiller_standby, fig12_day_night_equipment,
+               fig13_boxplot_models, fig14_baseline_target, fig15_ktc_verification, fig16_three_stage_plan,
+               fig17_daytime_2026, fig18_load_heatmap, fig19_state_transition, fig20_standby_simulation,
+               fig21_two_track_strategy):
         fn()
     import json
     with open(os.path.join(OUT, "stats.json"), "w", encoding="utf-8") as f:
