@@ -1,4 +1,40 @@
 {
+ "quarterly_station_sec": {
+  "2024Q3": {
+   "sec": 15.22,
+   "kg": 8831
+  },
+  "2024Q4": {
+   "sec": 15.44,
+   "kg": 9445
+  },
+  "2025Q1": {
+   "sec": 10.95,
+   "kg": 31039
+  },
+  "2025Q2": {
+   "sec": 10.7,
+   "kg": 40593
+  },
+  "2025Q3": {
+   "sec": 7.04,
+   "kg": 51141
+  },
+  "2025Q4": {
+   "sec": 8.0,
+   "kg": 29570
+  }
+ },
+ "full_period": {
+  "start": "2024-08-19",
+  "end": "2025-11-30",
+  "weeks": 67,
+  "kwh": 1650973,
+  "kg": 170619,
+  "sec": 9.68,
+  "low_weeks": 12
+ },
+ "annual_2025_kwh": 1414865,
  "process_kwh_share": {
   "생산": 47.7,
   "압축": 39.6,
@@ -72,13 +108,51 @@
   "night_share": 39.9,
   "night_kwh_per_day": 162.1
  },
+ "day_night_kW": {
+  "메인 칠러": [
+   20.8,
+   13.5
+  ],
+  "서브 칠러": [
+   12.1,
+   0.5
+  ],
+  "고압압축기": [
+   7.7,
+   0.1
+  ],
+  "압축기용 냉각기 #2·HP": [
+   20.5,
+   17.6
+  ],
+  "저압압축기 #2": [
+   33.6,
+   34.2
+  ],
+  "중압압축기": [
+   19.6,
+   14.2
+  ],
+  "개질기 #2": [
+   57.3,
+   58.2
+  ]
+ },
  "load_profile": {
   "night_kW": 155,
   "peak_hours": "14~18시",
   "peak_kW": 202
  },
- "station_sec": {
-  "weekly_43w": 9.07,
-  "daily_2025H2": 7.43
+ "standby_sim": {
+  "day_kwh": 244.3,
+  "night_kwh": 162.1,
+  "night_after": 24.4,
+  "saving_kwh_day": 137.7,
+  "night_cut_pct": 85.0,
+  "chiller_cut_pct": 33.9,
+  "station_cut_pct": 3.37,
+  "sec_before": 7.43,
+  "sec_after": 7.18,
+  "annual_mwh": 50.3
  }
 }
