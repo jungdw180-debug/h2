@@ -243,10 +243,10 @@ const NOTES = {
   toc: "발표는 과제 개요, 1단계 추진 실적과 연구 결과, 실증 인프라와 성능지표, 2단계 추진 계획, 결론 순서로 말씀드리겠습니다.",
   background: "먼저 과제 배경입니다. 국내 수소충전소 핵심설비는 대부분 중소기업이 공급하는데, 현장에서는 세 가지 문제가 반복됩니다. 첫째, 고장이 잦습니다. 저희가 분석한 상용 충전소에서 다이어프램은 평균 117시간마다 교체됐고, 릴리프밸브는 석 달을 버티지 못했습니다. 아래 사진이 실제 고장 부품입니다. 둘째, 에너지를 많이 씁니다. 수소 1킬로그램을 충전하는 데 약 9.5 kWh를 쓰고 있고, 압축기와 냉각기에 부하가 집중됩니다. 셋째, 국산 설비의 검증 실적이 부족해 현장 신뢰를 얻기 어렵습니다. 그래서 본 과제는 핵심부품을 고내구화하고, 에너지를 20% 이상 줄이며, 데이터로 고장을 미리 아는 관리체계를 만드는 것을 목표로 합니다.",
   goal: "최종목표는 세 가지입니다. 핵심부품과 설비의 내구성을 1.5배 높이고, 에너지 사용량을 20% 이상 줄이며, 이를 묶어 K-수소충전소 운영모델을 제시하는 것입니다. 과제는 두 단계로 설계되어 있습니다. 1단계에서는 부품을 개선해 공인시험으로 성능을 확인하고, 신뢰성 관리체계와 실증 기반을 만들었습니다. 2단계에서는 개선 설비를 실제 충전소에 설치해 설비 단위 내구성과 충전소 단위 에너지 절감을 현장에서 검증합니다. 기술성숙도는 TRL 7에서 8로 올리는 것이 목표입니다.",
-  org: "추진체계입니다. 12개 기관이 부품, 설비, 충전소 세 층으로 연결되어 있습니다. 부품 기업이 피스톤 씰, 다이어프램, IR 노즐, 밸브, PCHE를 개선하고, 설비 기업이 이를 압축기, 충전기, 냉각기에 적용하며, 주관기관과 운영기관이 진단과 실증, 운영모델을 맡습니다. 이 층들은 데이터와 제품으로 실제 연결되어 있습니다. 창원산업진흥원이 현장 교체 데이터를 분석해 범한산업 설계에 반영했고, 코하이젠의 고장이력은 진단 알고리즘 개발에 쓰였습니다. 밸브 개선품은 컨소시엄 안의 충전기 제조사 두 곳에 공급되었고, 듀얼 디스펜서 성능시험은 삼정이엔씨와 함께 수행했습니다.",
+  org: "추진체계입니다. 12개 기관이 부품, 설비, 충전소 세 층으로 구성되어 있습니다. 부품 기업이 핵심부품을 개선하면 설비 기업이 압축기, 충전기, 냉각기에 적용하고, 주관기관과 운영기관이 진단과 실증, 운영모델을 맡습니다. 정기 진도점검, 실증 충전소 세 곳, MOU 12건으로 협력했고, 구체적인 연계 실적은 뒤에서 따로 보여드리겠습니다.",
   summary: "1단계 결과를 네 가지로 요약하겠습니다. 첫째, 내구입니다. 고장이 잦던 핵심부품 네 가지를 개선해 공인시험에서 모두 1.5배 이상을 확인했고, 피스톤 씰은 3.3배입니다. 둘째, 진단입니다. 운전데이터로 실제 중정비 고장을 92일 전에 감지했습니다. 셋째, 효율입니다. 공인기관과 함께 에너지 기준선 9.5를 확정했고, 고효율 칠러로 충전 시 전력을 21.4% 줄였습니다. 넷째, 실증입니다. 인허가 세 건을 모두 받고 2단계 공사를 앞당겨 착공했습니다. 부품은 입증했고, 이를 충전소에서 검증할 준비가 끝났습니다.",
-  achieve: "계획 대비 달성도입니다. 평가위원님들께서 연구개발계획서와 비교하실 수 있도록 개발 항목 기준으로 정리했습니다. 1단계 개발 항목은 1차년도 30개, 2차년도 29개, 3차년도 33개로 모두 92개이며, 전 항목을 완료했습니다. 분야별로는 분석·진단 16개, 압축기 26개, 냉각기 5개, 충전기 33개, 현장 실증 12개입니다. 1차년도에는 고장 분석과 설계 기준을 세웠고, 2차년도에는 시제품과 공인 기준치를 확보했으며, 3차년도에는 공인시험으로 목표를 확인하고 실증 인허가를 마쳤습니다. 오른쪽에 분야별 대표 산출물을 정리했고, 이어지는 연구 결과에서 자세히 말씀드리겠습니다.",
-  dashboard: "정량 성과입니다. 1단계 목표가 설정된 12개 지표 중 10개를 달성했습니다. SCIE 논문은 목표 5건 대비 14건, SW 저작권은 5건 대비 28건, 사업화 매출은 20억 원 목표 대비 32억 8천만 원을 달성했습니다. 고용은 35명, 현장시험은 14건으로 실증 중심 과제의 특성이 반영된 결과입니다. 다만 주황색으로 표시한 특허 등록과 기술실시 두 지표는 목표에 못 미쳤습니다. 특허는 14건을 출원했으나 심사 중인 건이 많고, 기술실시는 실증 결과를 기다리는 수요기업이 있기 때문입니다. 원인과 보완 계획은 뒤에서 따로 말씀드리겠습니다.",
+  achieve: "계획 대비 달성도입니다. 평가위원님들께서 연구개발계획서와 비교하실 수 있도록 개발 항목 기준으로 정리했습니다. 1단계 개발 항목은 1차년도 30개, 2차년도 29개, 3차년도 33개로 모두 92개이며, 전 항목을 완료했습니다. 분야별로는 분석·진단 16개, 압축기 26개, 냉각기 5개, 충전기 33개, 현장 실증 12개입니다. 오른쪽에 분야별 대표 산출물을 정리했고, 이어지는 연구 결과에서 자세히 말씀드리겠습니다.",
+  dashboard: "정량 성과입니다. 1단계 목표가 설정된 12개 지표 중 10개를 달성했고, 그중 9개는 목표를 넘었습니다. 별표로 표시한 6개 지표는 목표의 두 배 이상입니다. SCIE 논문 280%, SW 저작권 560%, MOU 600%, 사업화 233%, 고용 219%, 국가인증 200%입니다. 사업화 매출도 32억 8천만 원으로 목표 대비 164%입니다. 특허는 14건을 모두 출원했고 4건이 등록되었으며, 나머지 10건은 심사가 진행 중입니다. 기술실시는 2건을 계약했고, 실증 결과와 연계한 추가 이전을 진행하고 있습니다.",
   piston: "지금부터 분야별 연구 결과입니다. 먼저 피스톤 압축기입니다. 피스톤 씰은 마모가 빨라 수소 보충과 정비가 잦은 부품이었습니다. 오른쪽 아래처럼 마모 해석으로 취약 부위를 확인한 뒤, 피스톤 소재를 A7075로 바꾸고 이중 스프링씰과 보조 씰 구조를 적용했습니다. 그 결과 공인시험에서 기준 300시간 대비 2025년 450시간, 2026년 1,000시간을 달성했습니다. 1단계 목표가 1.5배였는데 3.3배로 두 배 이상 넘었습니다. 이 씰을 적용한 신규 압축기 제작도 마쳐 2단계에 실증 설비동에 설치합니다.",
   diaphragm: "다음은 다이어프램 압축기입니다. 왼쪽은 시험실 결과입니다. 캐비티 형상을 최적화해 최대응력을 22.6% 낮췄고, PFA 코팅 다이어프램은 공인시험에서 1,561시간을 확인했습니다. 오른쪽은 현장 결과입니다. 가포 상용 충전소에 개발품을 먼저 적용했더니, 평균 교체 운전시간이 기존 117시간에서 492.7시간으로 4.21배 늘었습니다. 최초 적용품은 1,025시간까지 운전했습니다. 함께 개선한 릴리프밸브도 수명이 3개월에서 8개월 이상으로 늘었습니다. 시험실을 넘어 상용 충전소에서 효과를 확인한 사례입니다.",
   dispenser: "충전기 핵심부품입니다. 충전노즐의 IR 리시버는 영하 40도부터 상온까지 온도별 시험을 거쳐 공인시험에서 15,000사이클, 기준 대비 150%를 달성했습니다. 유량조절밸브는 96.3 MPa 작동시험 153,030회로 역시 150%를 달성했습니다. 특히 밸브는 계획보다 앞당겨 코하이젠 충전소에 설치해 10개월 동안 실제 차량 충전 1,672회를 문제없이 수행했고, 이미 충전기 제조사 두 곳에 세 기를 공급했습니다. 동시충전 듀얼 디스펜서는 시제품을 제작해 시운전했고, 120 g/s 공인시험은 11월에 진행합니다.",
@@ -255,28 +255,30 @@ const NOTES = {
   eff1: "효율 분야입니다. 먼저 출발점인 기준선을 확정했습니다. 공인기관 입회로 검증한 계측 체계로 사업대상지의 에너지 사용량을 측정해, 수소 1킬로그램당 9.5 kWh를 기준선으로 정했습니다. 최종 목표는 여기서 20% 줄인 7.6입니다. 그리고 병목을 찾았습니다. 오른쪽 그래프처럼 차량이 없는 밤에도 메인 칠러가 영하 40도 사전 냉각을 유지하느라 시간당 12.9 kWh를 쓰고 있었고, 칠러 전력량의 38.7%가 야간 대기에 쓰이고 있었습니다.",
   eff2: "절감 수단은 두 축으로 확보했습니다. 하드웨어 측면에서는 방금 보신 고효율 칠러와 압축기 동력전달 개선, 고내구 PCHE가 있습니다. 운영 측면에서는 피크와 오프피크를 나눈 차등 운전과, 유휴 시간에 단계적으로 들어가는 절전 모드를 설계했습니다. 칠러 야간 운전만 바꿔도 대기전력을 85% 줄일 수 있다는 것을 12개월 실측 데이터로 확인했습니다. 2단계에서는 두 축을 함께 적용하고, 처리량 영향을 보정한 SEC로 순수 절감 효과를 분리해 공인기관 입회 아래 충전소 단위로 검증하겠습니다.",
   infra: "실증 인프라입니다. 상용 충전소를 운영하면서 설비를 추가해야 하는 조건이었지만, KGS 변경 기술검토, 건축허가, 고압가스 제조 변경허가를 모두 받았고, 2단계에 하기로 했던 설비동 공사를 앞당겨 기초까지 타설했습니다. 오른쪽 배치도가 신규 압축기, 냉각기, 충전기가 들어갈 위치입니다. 고압 압축기는 이미 제작을 마쳤고, 세종대평 충전소의 충전기 실증도 1년 앞당겨 12월 준공 예정입니다. 2단계가 시작되는 날부터 개선 설비를 설치할 수 있습니다.",
-  perf: "성능지표 달성 현황입니다. 연구개발계획서에 정한 성능지표를 1단계 목표와 실적, 검증 방식으로 정리했습니다. 피스톤식과 다이어프램식 압축기 내구성, 충전기 IR 리시버 내구성, 유량조절밸브 작동시험, 냉각기 에너지효율은 모두 공인기관 시험으로 달성했습니다. 충전 유량은 11월 공인시험을, PCHE는 반복가압 시험을 진행하고 있습니다. 미달은 다이어프램 압축기 전력 절감과 충전소 단위 에너지 저감 검증 두 가지이며, 바로 다음 장에서 보완 계획을 말씀드리겠습니다.",
-  gap: "미달 항목과 보완 계획입니다. 특허는 14건을 출원했지만 심사 기간 때문에 등록은 4건입니다. 심사 대응을 강화해 2027년 안에 등록으로 전환하겠습니다. 기술실시는 수요기업이 현장 실증 결과를 요구해 2건에 그쳤고, 실증 결과와 특허를 묶어 이전하겠습니다. 충전소 에너지 절감은 기준선과 병목을 확정했고, 운전 로직을 12월까지 완료해 2027년 안에 공인검증을 마치겠습니다. 다이어프램 압축기 전력은 고효율 벨트로 동력전달을 개선해 다시 검증합니다. 네 항목의 공통 원인은 현장 실증 전 단계라는 점이며, 2단계 1차년도에 보완하겠습니다.",
+  perf: "성능지표 달성 현황입니다. 피스톤식과 다이어프램식 압축기 내구성, 충전기 IR 리시버 내구성, 유량조절밸브 작동시험, 냉각기 에너지효율 등 부품 내구성과 성능 지표는 모두 공인기관 시험으로 달성했습니다. 충전 유량은 11월 공인시험을, PCHE는 반복가압 시험을 진행하고 있습니다. 다이어프램 압축기 전력과 충전소 단위 에너지 절감은 1차 개선과 기준선 확정까지 마쳤고, 실증 설비와 함께 2단계에서 이어서 완료합니다. 다음 장에서 계획을 말씀드리겠습니다.",
+  gap: "진행 중인 항목과 2단계 계획입니다. 특허는 14건을 모두 출원해 4건이 등록됐고, 10건은 심사 중이라 2027년 안에 등록으로 전환하겠습니다. 기술실시는 2건을 계약했고, 실증 결과와 등록 특허를 묶어 추가 이전을 추진합니다. 충전소 에너지 절감은 기준선과 병목을 확정했고, 12월까지 운전 로직을 완료해 2027년 안에 공인검증을 마치겠습니다. 다이어프램 압축기 전력은 플라이휠로 4%를 줄였고 예측과 실측이 일치했으며, 고효율 벨트로 추가 개선합니다. 네 항목은 2단계 1차년도에 이어서 완료하겠습니다.",
   next: "2단계 계획입니다. 2단계는 새로운 연구가 아니라 1단계 결과물을 현장에서 검증하고 확산하는 단계입니다. 피스톤 씰 압축기는 패키지로 장기 실증하고, 고효율 칠러와 절전 로직은 충전소 단위 에너지 절감으로 검증합니다. FMECA와 조기경보는 신뢰성 데이터베이스와 잔여수명 예측으로, 경제성 평가 툴은 K-충전소 운영모델로 발전시킵니다. 2027년 설치와 공인검증, 2028년 장기 실증, 2029년 운영모델 순서로 진행합니다.",
   target: "2단계 성과 목표와 연구비입니다. 2단계는 1단계에서 논문과 소프트웨어 성과를 충분히 확보한 만큼, 실증 이후 권리화와 사업화에 무게를 두었습니다. 특허 등록 11건, 사업화 12건, 매출 80억 원이 핵심 목표입니다. 연구비는 2단계 전체 약 78억 원이며, 실증 설비 설치와 장기 실증이 집중되는 4차년도와 5차년도에 각각 약 34억 원을 배정했고, 마지막 3개월인 6차년도는 결과 정리와 운영모델 완성에 씁니다.",
   risk: "실증 단계의 리스크와 대응 현황입니다. 가장 큰 리스크는 설비 설치 지연인데, 2단계 공사를 1단계에 앞당겨 착공했고 고압 압축기는 이미 제작을 마쳤습니다. 인허가는 충주가 완료되었고, 세종은 안전영향평가와 기술검토 신청을 마쳤습니다. 신뢰성 데이터베이스는 데이터 양이 관건인데, 충주 3년치 상용 데이터에 세종과 가포 데이터를 더하고, 해외 OREDA 구조와 미국 HyCReD로 벤치마킹하겠습니다.",
   biz: "활용과 사업화입니다. 1단계 사업화 매출은 32억 8천만 원으로 목표를 넘었습니다. 지티씨와 범한산업의 압축기, MT.H의 밸브가 실제로 판매되었습니다. 시제품은 아래와 같이 압축기, 충전기, 듀얼 디스펜서, 냉각기, 밸브까지 7건을 제작했습니다. 2단계에서는 부품 공급을 넘어 실증을 마친 설비 패키지와 운영모델로 사업화를 넓혀, 충전소 셧다운 방지와 운영비 절감에 기여하겠습니다.",
-  conclusion: "정리하겠습니다. 1단계에서는 핵심부품 네 가지의 내구성을 공인시험으로 1.5배 이상 입증했고, 실제 고장을 92일 전에 감지하는 관리체계와 공인 에너지 기준선을 확보했습니다. 그리고 이 성과를 검증할 실증 설비동을 이미 착공했습니다. 2단계에서는 개선 설비를 충전소에 설치해 설비 내구성 1.5배와 에너지 20% 절감을 현장에서 검증하고, 신뢰성 데이터베이스와 함께 K-수소충전소 운영모델로 완성하겠습니다. 이상으로 발표를 마치겠습니다.",
+  conclusion: "정리하겠습니다. 1단계에서는 핵심부품 네 가지의 내구성을 공인시험으로 1.5배 이상 입증했고, 실제 고장을 92일 전에 감지하는 관리체계와 공인 에너지 기준선을 확보했으며, 실증 설비동을 이미 착공했습니다. 정량 성과도 12개 지표 중 10개를 달성했고 9개는 목표를 넘었으며, 부품부터 충전소, 시험평가까지 이어지는 순환형 연계 구조를 만들었습니다. 2단계에서는 개선 설비를 충전소에 설치해 설비 내구성 1.5배와 에너지 20% 절감을 현장에서 검증하고, K-수소충전소 운영모델로 완성하겠습니다. 이상으로 발표를 마치겠습니다.",
   thanks: "감사합니다. 질문 주시면 답변드리겠습니다.",
+  f_linkage: "기관 간 연계입니다. 밸브 기업의 개선품이 충전기 업체 디스펜서에 들어가고, 이 디스펜서를 운영사 충전소에 설치해 시험차량으로 실제 충전을 검증합니다. 이 충전소 운영 데이터는 진단 알고리즘이 되었고, 현장 실증 데이터는 부품 설계 개선으로 돌아갔습니다. 개선 압축기와 냉각기, 듀얼 디스펜서는 잠시 뒤 보실 이 충전소 설비동으로 모입니다.",
+  linkage: "이번 장은 기관들이 실제로 어떻게 맞물려 일했는지 보여드립니다. 위쪽은 대표 사례입니다. MT.H의 밸브 개선품을 MSENG 디스펜서에 붙이고, 코하이젠이 운영하는 충전소에 설치해, 한국자동차연구원 시험차량으로 충전 성능을 검증했습니다. 부품, 완제품, 충전소, 시험평가가 한 줄로 이어진 사례입니다. 아래 여섯 가지처럼 운영 데이터는 진단 알고리즘으로, 현장 데이터는 설계 개선으로 이어졌고, 개선 설비는 충주 실증 충전소로 모입니다. 실증 결과가 다시 제조사 설계로 돌아가는 순환 구조를 만든 것이 이 컨소시엄의 가장 큰 성과입니다.",
   // 현장평가판
   f_overview: "안녕하십니까. 현장에서 짧게 과제를 소개드리고 견학으로 이어가겠습니다. 국내 수소충전소 핵심설비는 고장이 잦습니다. 이 충전소에서도 다이어프램이 평균 117시간마다 교체됐고, 릴리프밸브는 석 달을 버티지 못했습니다. 왼쪽 아래 사진이 실제 고장 부품입니다. 또 수소 1킬로그램에 약 9.5 kWh를 쓰고, 국산 설비의 현장 실적이 부족합니다. 그래서 본 과제는 핵심부품과 설비 내구성 1.5배, 에너지 20% 절감, K-충전소 운영모델을 목표로 합니다. 12개 기관이 부품, 설비, 충전소로 연결되어 1단계에서는 개발과 체계 구축, 2단계에서는 현장 검증을 수행합니다.",
-  f_summary: "1단계 성과입니다. 위쪽 네 가지가 핵심입니다. 첫째, 핵심부품 네 가지는 공인시험에서 1.5배 이상을 달성했고 피스톤 씰은 3.3배입니다. 둘째, 이 충전소 데이터로 만든 이상감지 모델이 실제 중정비 고장을 92일 전에 감지했습니다. 셋째, 공인기관과 함께 에너지 기준선 9.5를 확정했고 고효율 칠러로 충전 전력을 21.4% 줄였습니다. 넷째, 인허가를 모두 받고 실증 설비동을 앞당겨 착공했습니다. 아래는 정량지표입니다. 12개 중 10개를 달성했고, 특허 등록과 기술실시는 2단계에서 보완하겠습니다.",
+  f_summary: "1단계 성과입니다. 위쪽 네 가지가 핵심입니다. 핵심부품 네 가지는 공인시험에서 1.5배 이상을 달성했고 피스톤 씰은 3.3배입니다. 이 충전소 데이터로 만든 이상감지 모델이 실제 중정비 고장을 92일 전에 감지했습니다. 공인기관과 함께 에너지 기준선 9.5를 확정했고, 실증 설비동을 앞당겨 착공했습니다. 아래는 정량지표입니다. 12개 중 10개를 달성했고 9개는 목표를 넘었으며, 별표 6개는 목표의 두 배 이상입니다. 특허와 기술실시는 심사와 이전이 진행 중입니다.",
   f_durability: "내구 성과를 표로 정리했습니다. 피스톤 씰은 공인시험에서 300시간에서 1,000시간으로 3.3배가 되었습니다. 다이어프램은 상용 충전소에서 교체주기가 117시간에서 492.7시간으로 4.21배 늘었습니다. IR 리시버는 15,000사이클, 유량조절밸브는 153,030회로 각각 1.5배를 달성했고, 밸브는 실제 충전소에서 10개월간 1,672회 충전했습니다. 고효율 칠러는 충전 1킬로그램당 전력을 21.4% 줄였습니다. 이 부품들의 실물과 성적서는 견학 4번 지점에서 직접 보여드리겠습니다.",
   f_diag: "진단 성과입니다. 이 충전소의 3년 운전·정비 데이터로 이상감지 모델을 만들었습니다. 2023년 12월 실제 중정비가 발생한 압축기 고장을 통계 모델은 92일 전, AI 모델은 41일 전에 감지했고, 다이어프램 사건도 며칠 앞서 경보를 냈습니다. 또 고장모드 148개의 위험도를 정량화해 고장대응 매뉴얼 세 종을 만들었습니다. 견학 1번 지점 모니터링 화면에서 실시간 전력과 진동 데이터를 보여드리겠습니다.",
   f_eff: "효율 성과입니다. 공인기관 입회로 이 충전소의 에너지 기준선을 수소 1킬로그램당 9.5 kWh로 확정했습니다. 그래프처럼 차량이 없는 밤에도 메인 칠러가 영하 40도를 유지하느라 전력을 쓰고 있었고, 칠러 전력량의 38.7%가 야간 대기에 쓰였습니다. 그래서 고효율 칠러로 교체하는 하드웨어 축과, 피크와 오프피크를 나눈 절전 운전 축으로 줄이겠습니다. 2단계에서 공인기관 입회로 충전소 단위 절감량을 검증합니다. 견학 2번 지점에서 이 칠러를 보여드리겠습니다.",
   f_infra: "실증 인프라입니다. 상용 운영을 유지하면서 설비를 추가해야 하는 조건이었지만, KGS 기술검토, 건축허가, 고압가스 제조 변경허가를 모두 받았고, 2단계 공사를 앞당겨 설비동 기초까지 타설했습니다. 배치도의 붉은 표시가 신규 압축기, 냉각기, 충전기가 들어갈 위치입니다. 고압 압축기는 이미 제작했고, 세종 충전기 실증도 1년 앞당겼습니다. 견학 3번 지점에서 공사 현장을 직접 보여드리겠습니다.",
-  f_perfgap: "성능지표와 미달 항목입니다. 성능지표는 달성 6개, 진행 2개, 미달 2개이며, 부품 내구성 지표는 모두 공인시험으로 달성했습니다. 오른쪽은 미달 항목의 보완 계획입니다. 특허 등록은 심사 대응으로 2027년 안에 전환하고, 기술실시는 실증 결과와 특허를 묶어 이전합니다. 충전소 에너지 절감은 12월에 운전 로직을 완료하고 2027년 안에 공인검증을 마치며, 다이어프램 압축기 전력은 고효율 벨트로 다시 검증합니다.",
+  f_perfgap: "성능지표는 달성 6개, 진행 4개이며, 부품 내구성 지표는 모두 공인시험으로 달성했습니다. 오른쪽은 2단계에서 이어서 완료할 항목입니다. 특허는 심사 대응으로 2027년 안에 등록을 전환하고, 기술실시는 실증 결과와 묶어 추가 이전합니다. 충전소 에너지 절감은 12월에 운전 로직을 완료하고 2027년 안에 공인검증을 마치며, 다이어프램 압축기 전력은 고효율 벨트로 추가 개선합니다.",
   f_next: "2단계 계획입니다. 2027년에는 이 설비동에 개선 설비를 설치하고 에너지 절감량을 공인검증하며, 2028년에는 장기 실증과 신뢰성 데이터베이스 검증, 2029년에는 K-충전소 운영모델로 정리합니다. 설치 일정 리스크는 공사를 앞당겨 착공하고 압축기를 미리 제작해 줄였습니다.",
-  f_conclusion: "정리하면, 핵심부품 내구성은 공인시험으로 입증했고, 고장을 미리 아는 체계와 에너지 기준선을 확보했으며, 실증 설비동도 착공했습니다. 2단계에서 이 충전소에서의 현장 검증으로 완성하겠습니다.",
+  f_conclusion: "정리하면, 핵심부품 내구성은 공인시험으로 입증했고 정량 성과도 초과 달성했으며, 기관 간 순환형 연계 구조와 실증 설비동을 갖췄습니다. 2단계에서 이 충전소에서의 현장 검증으로 완성하겠습니다.",
   f_tour: "이제 현장으로 이동하겠습니다. 모니터링 화면, 메인 칠러와 압축기, 설비동 공사 현장, 개선 부품 실물 순서로 보여드리겠습니다.",
   // Appendix 답변
   a_errata: "수치 질문 대응: 보고서 장마다 집계 기준일이 달라 생긴 차이입니다. 2026년 10월 30일 제출본 정량성과표를 공식 수치로 하며, 정오표를 제출하겠습니다.",
-  a_patent: "특허 질문 대응: 14건을 출원했고 4건이 등록되었습니다. 심사 중인 10건은 의견제출과 보정 대응을 하고 있으며, 2027년 안에 등록 전환을 추진합니다.",
+  a_patent: "특허 질문 대응: 14건을 모두 출원했고 4건이 등록되었습니다. 10건은 심사가 진행 중이며, 출원 건수로는 목표를 넘었고 2027년 안에 등록 전환을 추진합니다.",
   a_paper: "논문 질문 대응: SCIE 14건 중 충전소 설비·운영과 직접 관련된 논문이 7건입니다. 나머지는 수소 생산·운송과 공정 경제성 분석 역량을 활용한 파생 성과입니다.",
   a_sales: "매출 질문 대응: 매출은 GTC 압축기 납품, 범한산업 압축기, MT.H 밸브 공급으로 구성됩니다. 2026년 GTC 매출 10억 8백만 원은 세금계산서 발행 후 연내 수금 예정입니다.",
   a_field: "현장 근거 질문 대응: 다이어프램은 기존품과 개발품 각각 교체 3회를 비교했습니다. 최초 적용품이 1,025시간을 운전했고, 이후 교체주기 단축도 확인되어 원인을 범한산업과 분석하고 있습니다.",
@@ -387,20 +389,49 @@ function sOrg(pres, C, t) {
     ["설비", C.accent3, "✓  압축기: GTC, 범한산업 · 충전기: MSENG, 제아ENG · 냉각기: 삼정이엔씨"],
     ["부품", C.accent4, "✓  피스톤 씰: GTC, 한국자동차연구원 · 다이어프램: 범한산업, 한국자동차연구원\n✓  IR 노즐: MSENG · 유량조절밸브: MT.H콘트롤밸브 · PCHE: 에너진"],
   ];
-  const hs = [0.7, 0.7, 0.95];
+  const hs = [0.8, 0.8, 1.05];
   let y = 1.55;
   rows.forEach(([tab, col, txt], i) => { checkRow(s, pres, C, y, hs[i], tab, col, txt); y += hs[i] + 0.1; });
-  panel(s, pres, C, MX, 4.2, CW, 2.05, "기관 간 협력 실적");
-  const w = (CW - 0.6) / 2;
-  addBullets(s, C, [
-    [1, "데이터 환류"], [2, "창원산업진흥원 현장 교체 데이터 → 범한산업 설계 개선"], [2, "코하이젠 고장이력 → 주관기관 진단 알고리즘"],
-  ], MX + 0.3, 4.78, w, 1.4, 14);
-  addBullets(s, C, [
-    [1, "제품·시험 연계"], [2, "MT.H 밸브 개선품 → MSENG·제아ENG 3기 공급"], [2, "듀얼 디스펜서 성능시험 제아ENG–삼정이엔씨 협업"],
-  ], MX + 0.3 + w + 0.2, 4.78, w, 1.4, 14);
-  callout(s, pres, C, [["현장 데이터 → 고장모드 정량화 → 개선 부품 → 현장 재확인의 ", false], ["순환 구조", true]]);
-  source(s, C, "출처: 단계보고서 표지, p.26, p.28, p.39, p.42, p.315 · 지원: 충주시, 충북도");
+  panel(s, pres, C, MX, 4.5, CW, 1.75, "협력 운영 체계");
+  const w = (CW - 0.8) / 3;
+  [[[1, "정기 협의"], [2, "정기 진도점검회의·기술협의"]], [[1, "현장 연계"], [2, "현장 기술교류회, 실증 충전소 3곳 운영"]], [[1, "외부 협력"], [2, "지자체–운영사–제조사 네트워크, MOU 12건"]]]
+    .forEach((bl, i) => addBullets(s, C, bl, MX + 0.3 + i * (w + 0.1), 5.08, w, 1.1, 15));
+  callout(s, pres, C, [["부품 제조사–완제품 제조사–충전소 운영사–시험평가기관이 ", false], ["하나의 컨소시엄으로 협력", true]]);
+  source(s, C, "출처: 단계보고서 표지, p.310, p.311, p.315, p.317 · 지원: 충주시, 충북도");
   addNote(s, "org");
+}
+
+// 컨소시엄 유기적 연계 수행
+function sLinkage(pres, C, t, section, noteKey = "linkage") {
+  const s = contentSlide(pres, C, section, t, "컨소시엄 유기적 연계 수행: 부품–완제품–충전소–시험평가 순환 구조");
+  s.addText("연계 실증 사례  유량조절밸브 → 디스펜서 → 실증 충전소 → 시험차량", { x: MX, y: 1.5, w: CW, h: 0.34, fontSize: 15, bold: true, color: C.accent2, margin: 0, isTextBox: true });
+  const chain = [["MT.H콘트롤밸브", "유량조절밸브\n실증 개선품 공급"], ["MSENG", "87.5 MPa급 디스펜서\n시제품에 밸브 부착"], ["코하이젠", "운영 중인 실증 충전소에\n디스펜서 설치"], ["한국자동차연구원", "시험차량으로\nSAE J2601 충전 실증"]];
+  const ga = 0.42, cw = (CW - 3 * ga) / 4;
+  chain.forEach(([org, body], i) => {
+    const x = MX + i * (cw + ga);
+    s.addText(org, { shape: pres.shapes.RECTANGLE, x, y: 1.92, w: cw, h: 0.44, fill: { color: [HEX.accent4, HEX.accent3, HEX.dk2, HEX.accent2][i] }, fontSize: 15, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addText(body, { shape: pres.shapes.RECTANGLE, x, y: 2.36, w: cw, h: 0.82, fill: { color: C.background2 }, line: { color: CALLOUT_LINE, width: 0.75 }, fontSize: 14, color: C.text1, align: "center", valign: "middle", margin: 4, isTextBox: true });
+    if (i < 3) s.addShape(pres.shapes.RIGHT_ARROW, { x: x + cw + 0.07, y: 2.42, w: ga - 0.14, h: 0.34, fill: { color: C.accent6 } });
+  });
+  const links = [
+    ["코하이젠 → 고등기술연구원", "운전·정비·고장이력 데이터 → 진단 알고리즘·조기경보"],
+    ["창원산업진흥원 ↔ 범한산업", "가포 충전소 개발품 실증 → 교체 데이터 공유·설계 개선"],
+    ["한국자동차연구원 → GTC·범한산업", "구조해석·내구시험 데이터 → 압축기 핵심부품 최적설계"],
+    ["MT.H → MSENG·제아ENG", "밸브 실증 개선품 3기 공급 및 성능 검증"],
+    ["제아ENG ↔ 삼정이엔씨", "듀얼 디스펜서 개발품 자체 성능시험 협업"],
+    ["GTC·삼정·제아ENG → 충주 충전소", "피스톤 압축기·냉각기·듀얼 디스펜서 실증 설치(예정 포함)"],
+  ];
+  const lw = (CW - 0.4) / 3, lh = 1.4;
+  links.forEach(([hd, body], i) => {
+    const x = MX + (i % 3) * (lw + 0.2), y = 3.4 + Math.floor(i / 3) * (lh + 0.12);
+    s.addShape(pres.shapes.RECTANGLE, { x, y, w: lw, h: lh, fill: { color: C.background1 }, line: { color: BORDER, width: 0.75 } });
+    s.addText(`${i + 1}`, { shape: pres.shapes.OVAL, x: x + 0.15, y: y + 0.15, w: 0.36, h: 0.36, fill: { color: C.accent1 }, fontSize: 13, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addText(hd, { x: x + 0.6, y: y + 0.12, w: lw - 0.7, h: 0.42, fontSize: 14, bold: true, color: C.accent2, valign: "middle", margin: 0, isTextBox: true });
+    s.addText(body, { x: x + 0.2, y: y + 0.62, w: lw - 0.35, h: 0.7, fontSize: 14, color: C.text1, valign: "top", margin: 0, isTextBox: true });
+  });
+  callout(s, pres, C, [["실증 결과가 각 제조사 설계 개선으로 환류되는 ", false], ["순환형 공동 고도화 구조", true], [" 구축", false]]);
+  source(s, C, "출처: 단계보고서 p.26, p.28, p.39, p.42, p.300, p.310, p.316");
+  addNote(s, noteKey);
 }
 
 function fOverview(pres, C, t) {
@@ -447,7 +478,7 @@ async function sSummary(pres, C, t) {
     addBullets(s, C, items, x + 0.25, 4.0, w - 0.35, 1.45, 15);
     pill(s, pres, C, b, x + w / 2 - 0.33, 5.65, b);
   }
-  callout(s, pres, C, [["부품 내구성 공인 입증 및 실증 인프라 조기 착공  →  ", false], ["2단계 충전소 현장 검증 준비 완료", true]]);
+  callout(s, pres, C, [["부품 내구성 공인 입증 · 정량 성과 초과 달성 · 실증 인프라 조기 착공  →  ", false], ["2단계 준비 완료", true]]);
   source(s, C, "출처: 단계보고서 p.12, p.13, p.22, p.36");
   addNote(s, "summary");
 }
@@ -482,33 +513,39 @@ function sAchieve(pres, C, t) {
 }
 
 const DASH = [
-  ["SCIE 논문", "14", "5", "건"], ["국내 논문", "8", "8", "건"], ["SW 저작권", "28", "5", "건"], ["사업화", "7", "3", "건"],
-  ["사업화 매출", "3,280", "2,000", "백만 원"], ["고용 창출", "35", "16", "명"], ["현장시험", "14", "10", "건"], ["시제품", "7", "5", "건"],
-  ["MOU", "12", "2", "건"], ["국가인증", "2", "1", "건"], ["특허 등록", "4", "10", "건", "출원 14건"], ["기술실시", "2", "4", "회", ""],
+  // [지표, 실적, 목표, 단위, 달성률, 구분(big: 200% 이상, over: 초과, eq: 달성, prog: 진행 중), 비고]
+  ["SCIE 논문", "14", "5", "건", 280, "big"], ["국내 논문", "8", "8", "건", 100, "eq"], ["SW 저작권", "28", "5", "건", 560, "big"], ["사업화", "7", "3", "건", 233, "big"],
+  ["사업화 매출", "3,280", "2,000", "백만 원", 164, "over"], ["고용 창출", "35", "16", "명", 219, "big"], ["현장시험", "14", "10", "건", 140, "over"], ["시제품", "7", "5", "건", 140, "over"],
+  ["MOU", "12", "2", "건", 600, "big"], ["국가인증", "2", "1", "건", 200, "big"], ["특허", "4+10", "등록 10", "건", 0, "prog", "등록 4 · 심사 중 10"], ["기술실시", "2", "4", "회", 0, "prog", "추가 이전 진행"],
 ];
+function dashPill(s, pres, C, kind, rate, x, y, w, fs = 11) {
+  const map = { big: [C.accent6, C.background1, `★ ${rate}%`], over: [C.accent1, C.background1, `${rate}%`], eq: [C.background1, C.accent1, `${rate}%`], prog: [C.background1, C.accent4, "진행 중"] };
+  const [fill, color, text] = map[kind];
+  s.addText(text, { shape: pres.shapes.ROUNDED_RECTANGLE, x, y, w, h: 0.28, rectRadius: 0.14, fill: { color: fill }, line: kind === "eq" || kind === "prog" ? { color, width: 1 } : undefined, fontSize: fs, bold: true, color, align: "center", valign: "middle", margin: 0, isTextBox: true });
+}
 function sDashboard(pres, C, t) {
-  const s = contentSlide(pres, C, "1단계 추진 실적", t, "정량 성과: 12개 지표 중 10개 달성");
+  const s = contentSlide(pres, C, "1단계 추진 실적", t, "정량 성과: 12개 지표 중 10개 목표 달성 · 9개 초과 (★ 200% 이상 6개)");
   const cols = 6, g = 0.16, w = (CW - g * (cols - 1)) / cols, h = 2.18;
-  for (let i = 0; i < DASH.length; i++) {
-    const [lab, a, tg, u, note] = DASH[i];
-    const miss = note !== undefined;
+  DASH.forEach(([lab, a, tg, u, rate, kind, note], i) => {
     const x = MX + (i % cols) * (w + g), y = 1.6 + Math.floor(i / cols) * (h + g);
-    s.addShape(pres.shapes.RECTANGLE, { x, y, w, h, fill: { color: miss ? C.background1 : C.background2 }, line: { color: miss ? HEX.accent6 : CALLOUT_LINE, width: miss ? 1.25 : 0.75 } });
-    s.addText(lab, { shape: pres.shapes.RECTANGLE, x, y, w, h: 0.42, fill: { color: miss ? C.accent6 : C.text2 }, fontSize: 14, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
-    s.addText(a, { x: x + 0.1, y: y + 0.55, w: w - 0.2, h: 0.85, fontSize: a.length > 3 ? 30 : 36, bold: true, color: miss ? C.accent6 : C.accent1, align: "center", valign: "middle", margin: 0, isTextBox: true });
-    s.addText(`목표 ${tg} ${u}`, { x: x + 0.1, y: y + 1.45, w: w - 0.2, h: 0.3, fontSize: 13, color: C.accent5, align: "center", margin: 0, isTextBox: true });
-    if (miss) s.addText(note ? `미달 · ${note}` : "미달", { x: x + 0.1, y: y + 1.78, w: w - 0.2, h: 0.28, fontSize: 12, bold: true, color: C.accent6, align: "center", margin: 0, isTextBox: true });
-  }
-  callout(s, pres, C, [["SCIE 14건 · SW 28건 · 사업화 매출 3,280백만 원 · 고용 35명 등 ", false], ["10개 지표 목표 초과", true]]);
-  source(s, C, "출처: 단계보고서 p.291 정량적 연구개발성과표(2026.10.30 제출본)");
+    const big = kind === "big", prog = kind === "prog";
+    s.addShape(pres.shapes.RECTANGLE, { x, y, w, h, fill: { color: prog ? C.background1 : C.background2 }, line: { color: big ? HEX.accent6 : prog ? HEX.accent4 : CALLOUT_LINE, width: big ? 1.5 : 0.75 } });
+    s.addText(lab, { shape: pres.shapes.RECTANGLE, x, y, w, h: 0.42, fill: { color: prog ? C.accent4 : C.text2 }, fontSize: 14, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addText(a, { x: x + 0.1, y: y + 0.5, w: w - 0.2, h: 0.75, fontSize: a.length > 3 ? 30 : 36, bold: true, color: big ? C.accent6 : prog ? C.accent4 : C.accent1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addText(prog ? note : `목표 ${tg} ${u}`, { x: x + 0.1, y: y + 1.28, w: w - 0.2, h: 0.3, fontSize: prog ? 12 : 13, bold: prog, color: prog ? C.accent4 : C.accent5, align: "center", margin: 0, isTextBox: true });
+    if (prog) s.addText(`목표 ${tg}${u === "회" ? "회" : "건"}`, { x: x + 0.1, y: y + 1.55, w: w - 0.2, h: 0.24, fontSize: 11, color: C.accent5, align: "center", margin: 0, isTextBox: true });
+    dashPill(s, pres, C, kind, rate, x + w / 2 - 0.55, y + 1.82, 1.1);
+  });
+  callout(s, pres, C, [["SCIE 280% · SW 560% · MOU 600% · 사업화 233% 등 ", false], ["정량 성과 목표 초과 달성", true], [" · 특허·기술실시 진행 중", false]]);
+  source(s, C, "출처: 단계보고서 p.291 정량적 연구개발성과표(2026.10.30 제출본), p.297, p.300 · 달성률 = 실적 / 1단계 목표");
   addNote(s, "dashboard");
 }
 
 async function fSummaryDash(pres, C, t) {
-  const s = contentSlide(pres, C, "1단계 추진 실적", t, "1단계 성과 요약 및 정량 성과");
+  const s = contentSlide(pres, C, "1단계 추진 실적", t, "1단계 성과 요약 및 정량 성과 초과 달성");
   const w = (CW - 0.6) / 4;
   for (let i = 0; i < 4; i++) {
-    const [ic, lab, big, unit, items, b] = SUMMARY_CARDS[i];
+    const [ic, lab, big, unit, items] = SUMMARY_CARDS[i];
     const x = MX + i * (w + 0.2);
     panel(s, pres, C, x, 1.55, w, 2.85, lab);
     await iconCircle(s, pres, C, ic, x + 0.25, 2.15, 0.6, C.accent1);
@@ -517,15 +554,16 @@ async function fSummaryDash(pres, C, t) {
     addBullets(s, C, items, x + 0.25, 3.0, w - 0.35, 1.2, 14);
   }
   const cols = 6, g = 0.12, mw = (CW - g * (cols - 1)) / cols, mh = 0.82;
-  DASH.forEach(([lab, a, tg, u, note], i) => {
-    const miss = note !== undefined;
+  DASH.forEach(([lab, a, tg, u, rate, kind], i) => {
+    const big = kind === "big", prog = kind === "prog";
     const x = MX + (i % cols) * (mw + g), y = 4.55 + Math.floor(i / cols) * (mh + 0.1);
-    s.addShape(pres.shapes.RECTANGLE, { x, y, w: mw, h: mh, fill: { color: miss ? C.background1 : C.background2 }, line: { color: miss ? HEX.accent6 : CALLOUT_LINE, width: miss ? 1.25 : 0.75 } });
-    s.addText(lab, { x: x + 0.1, y: y + 0.05, w: mw - 0.2, h: 0.3, fontSize: 12, bold: true, color: miss ? C.accent6 : C.text2, margin: 0, isTextBox: true });
-    s.addText([{ text: a, options: { fontSize: 20, bold: true, color: miss ? C.accent6 : C.accent1 } }, { text: ` / ${tg}`, options: { fontSize: 12, color: C.accent5 } }],
+    s.addShape(pres.shapes.RECTANGLE, { x, y, w: mw, h: mh, fill: { color: prog ? C.background1 : C.background2 }, line: { color: big ? HEX.accent6 : prog ? HEX.accent4 : CALLOUT_LINE, width: big ? 1.5 : 0.75 } });
+    s.addText(lab, { x: x + 0.1, y: y + 0.05, w: mw - 0.2, h: 0.3, fontSize: 12, bold: true, color: prog ? C.accent4 : C.text2, margin: 0, isTextBox: true });
+    s.addText([{ text: a, options: { fontSize: 20, bold: true, color: big ? C.accent6 : prog ? C.accent4 : C.accent1 } }, { text: ` / ${tg}`, options: { fontSize: 12, color: C.accent5 } }],
       { x: x + 0.1, y: y + 0.36, w: mw - 0.2, h: 0.42, valign: "middle", margin: 0, isTextBox: true });
+    dashPill(s, pres, C, kind, rate, x + mw - 0.92, y + 0.06, 0.82, 10);
   });
-  callout(s, pres, C, [["정량지표 12개 중 ", false], ["10개 목표 초과", true], [" · 특허 등록·기술실시는 2단계 보완", false]]);
+  callout(s, pres, C, [["정량지표 12개 중 ", false], ["10개 목표 달성(9개 초과)", true], [" · ★ 200% 이상 6개 · 특허·기술실시 진행 중", false]]);
   source(s, C, "출처: 단계보고서 p.12, p.13, p.22, p.36, p.291 · 수치는 실적 / 1단계 목표");
   addNote(s, "f_summary");
 }
@@ -776,7 +814,7 @@ async function sInfra(pres, C, t, section, noteKey = "infra") {
 }
 
 function statusCell(C, st) {
-  const col = { 달성: C.accent1, 진행: C.accent5, 미달: C.accent6 }[st.split("(")[0]];
+  const col = { 달성: C.accent1, 진행: C.accent4 }[st.split("(")[0]];
   return { text: "● " + st, options: { color: col, bold: true, align: "center" } };
 }
 function sPerf(pres, C, t) {
@@ -790,58 +828,59 @@ function sPerf(pres, C, t) {
     ["유량조절밸브 작동시험", "153,000회", "153,030회", "공인", "달성"],
     ["냉각기 에너지효율", "80%(20% 절감)", "kg당 21.4% 절감", "공인(KCL)", "달성"],
     ["운영현황·공정분석·경제성 보고서", "2 · 1 · 1건", "4 · 1 · 1건", "수요기업", "달성"],
-    ["충전 유량", "120 g/s", "공인시험 2026.11", "공인", "진행"],
-    ["PCHE 내구성", "(최종 100,000회)", "반복가압 시험 중", "–", "진행"],
-    ["다이어프램 압축기 전력소비량", "90%(10% 절감)", "96%(4% 절감)", "공인", "미달"],
-    ["충전소 소비에너지 저감", "90%(10% 절감)", "기준선 확정, 검증 2단계", "공인", "미달(이월)"],
+    ["충전 유량", "120 g/s", "공인시험 2026.11", "공인", "진행(11월)"],
+    ["PCHE 내구성", "(최종 100,000회)", "반복가압 시험 중", "–", "진행(시험 중)"],
+    ["다이어프램 압축기 전력소비량", "90%(10% 절감)", "1차 개선 4% 절감", "공인", "진행(2단계)"],
+    ["충전소 소비에너지 저감", "90%(10% 절감)", "기준선 확정·병목 규명", "공인", "진행(2단계)"],
   ].map((r, i) => i === 0 ? r : r.map((c, k) => (k === 4 ? statusCell(C, c) : { text: c, options: { color: C.text1, align: k === 0 ? "left" : "center" } })));
-  s.addTable(rows, { x: MX, y: 1.55, w: CW, colW: [3.7, 2.4, 3.0, 1.43, 1.6], rowH: 0.41, fontSize: 14, valign: "middle", border: { type: "solid", color: "D5DEE8", pt: 0.75 }, margin: [0, 0.1, 0, 0.1], fill: { color: HEX.lt1 } });
-  callout(s, pres, C, [["달성 6 · 진행 2 · 미달 2  →  ", false], ["부품 내구성 지표 전 항목 공인 달성", true]]);
+  s.addTable(rows, { x: MX, y: 1.55, w: CW, colW: [3.5, 2.3, 2.85, 1.33, 2.15], rowH: 0.41, fontSize: 14, valign: "middle", border: { type: "solid", color: "D5DEE8", pt: 0.75 }, margin: [0, 0.1, 0, 0.1], fill: { color: HEX.lt1 } });
+  callout(s, pres, C, [["달성 6 · 진행 4  →  ", false], ["부품 내구성 지표 전 항목 공인 달성", true], [" · 에너지 지표 2단계 연속 추진", false]]);
   source(s, C, "출처: 단계보고서 p.10~39 기관별 성능지표, p.292~293 · 제품설계 보고서 지표는 보고서 참조");
   addNote(s, "perf");
 }
 
 const GAPS = [
-  ["특허 등록 4 / 10건", "출원 14건 중 10건 심사 중", "의견제출·보정 대응 → 2027년 내 등록 전환(예상 [__]건)"],
-  ["기술실시 2 / 4회", "수요기업의 현장 실증 결과 요구", "실증 결과 + 특허 연계 기술 패키지 이전"],
-  ["충전소 에너지 절감 검증", "기준선 확정 후 운전 로직 개발 중", "2026.12 로직 완료 → 2027년 내 공인검증"],
-  ["다이어프램 압축기 전력", "플라이휠 단독 개선 4% 절감", "고효율 벨트(5V) 동력전달 개선 후 재검증"],
+  ["특허", "출원 14건 완료\n등록 4건 · 심사 진행 중 10건", "심사 대응 → 2027년 내 등록 전환(예상 [__]건)"],
+  ["기술실시", "2건 계약 완료(2025.06, 2026.10)\n실증 연계 추가 이전 협의", "실증 결과 + 등록 특허 연계 기술 패키지 이전"],
+  ["충전소 에너지 절감", "기준선 9.5 확정 · 병목 규명\n운전 로직 개발 중(2026.12 완료)", "2027년 내 공인기관 입회 절감량 검증"],
+  ["다이어프램 압축기 전력", "플라이휠 개선 4% 절감 확인\n(사전 예측과 실측 일치)", "고효율 벨트(5V) 적용 추가 개선 · 재검증"],
 ];
 function sGap(pres, C, t) {
-  const s = contentSlide(pres, C, "실증 인프라 및 성능지표", t, "미달 항목 원인 및 보완 계획");
+  const s = contentSlide(pres, C, "실증 인프라 및 성능지표", t, "진행 중 항목 및 2단계 연속 추진 계획");
   const tabs = [C.accent2, C.accent3, C.accent4, C.accent4];
-  s.addText("미달 항목", { x: MX, y: 1.55, w: 2.9, h: 0.38, fontSize: 14, bold: true, color: C.accent5, align: "center", margin: 0, isTextBox: true });
-  s.addText("원인", { x: MX + 3.15, y: 1.55, w: 3.9, h: 0.38, fontSize: 14, bold: true, color: C.accent5, margin: 0, isTextBox: true });
-  s.addText("보완 계획", { x: MX + 7.3, y: 1.55, w: 4.7, h: 0.38, fontSize: 14, bold: true, color: C.accent5, margin: 0, isTextBox: true });
+  s.addText("항목", { x: MX, y: 1.55, w: 2.6, h: 0.38, fontSize: 14, bold: true, color: C.accent5, align: "center", margin: 0, isTextBox: true });
+  s.addText("현재 진행 상황", { x: MX + 2.85, y: 1.55, w: 4.3, h: 0.38, fontSize: 14, bold: true, color: C.accent5, margin: 0, isTextBox: true });
+  s.addText("2단계 연속 추진 계획", { x: MX + 7.4, y: 1.55, w: 4.6, h: 0.38, fontSize: 14, bold: true, color: C.accent5, margin: 0, isTextBox: true });
   GAPS.forEach(([a, b, c], i) => {
     const y = 2.0 + i * 1.03;
-    s.addText(a, { shape: pres.shapes.RECTANGLE, x: MX, y, w: 2.9, h: 0.9, fill: { color: tabs[i] }, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
-    s.addShape(pres.shapes.RECTANGLE, { x: MX + 2.9, y, w: CW - 2.9, h: 0.9, fill: { color: ROWBG }, line: { color: ROWBG, width: 0 } });
-    s.addText(b, { x: MX + 3.15, y, w: 3.9, h: 0.9, fontSize: 15, color: C.text1, valign: "middle", margin: 0, isTextBox: true });
-    s.addText([{ text: "✓  ", options: { color: C.accent1, bold: true } }, { text: c, options: { color: C.text1 } }], { x: MX + 7.3, y, w: 4.7, h: 0.9, fontSize: 15, valign: "middle", margin: 0, isTextBox: true });
+    s.addText(a, { shape: pres.shapes.RECTANGLE, x: MX, y, w: 2.6, h: 0.9, fill: { color: tabs[i] }, fontSize: 16, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addShape(pres.shapes.RECTANGLE, { x: MX + 2.6, y, w: CW - 2.6, h: 0.9, fill: { color: ROWBG }, line: { color: ROWBG, width: 0 } });
+    s.addText(b, { x: MX + 2.85, y, w: 4.3, h: 0.9, fontSize: 14, color: C.text1, valign: "middle", margin: 0, isTextBox: true });
+    s.addShape(pres.shapes.RIGHT_ARROW, { x: MX + 7.05, y: y + 0.3, w: 0.25, h: 0.3, fill: { color: C.accent4 } });
+    s.addText(c, { x: MX + 7.4, y, w: 4.6, h: 0.9, fontSize: 15, bold: true, color: C.accent2, valign: "middle", margin: 0, isTextBox: true });
   });
-  callout(s, pres, C, [["공통 원인: 현장 실증 전 단계  →  ", false], ["2단계 1차년도 내 보완 완료", true], [" 추진", false]]);
-  source(s, C, "출처: 단계보고서 4장 p.312~314, 3-3절 p.297");
+  callout(s, pres, C, [["현장 실증과 연계된 항목  →  ", false], ["2단계 1차년도에 이어서 완료", true]]);
+  source(s, C, "출처: 단계보고서 4장 p.312~314, p.297, p.300, p.316~317");
   addNote(s, "gap");
 }
 
 function fPerfGap(pres, C, t) {
-  const s = contentSlide(pres, C, "실증 인프라 및 성능지표", t, "성능지표 달성 현황 및 미달 항목 보완 계획");
-  const sum = [["6", "달성", C.accent1], ["2", "진행", C.accent5], ["2", "미달", C.accent6]];
-  sum.forEach(([n, lab, col], i) => {
-    const y = 1.55 + i * 1.6;
-    s.addShape(pres.shapes.RECTANGLE, { x: MX, y, w: 3.1, h: 1.45, fill: { color: C.background2 }, line: { color: CALLOUT_LINE, width: 0.75 } });
-    s.addText([{ text: n, options: { fontSize: 40, bold: true, color: col } }, { text: "  " + lab, options: { fontSize: 18, bold: true, color: C.text1 } }],
-      { x: MX, y, w: 3.1, h: 1.45, align: "center", valign: "middle", margin: 0, isTextBox: true });
+  const s = contentSlide(pres, C, "실증 인프라 및 성능지표", t, "성능지표 달성 현황 및 2단계 연속 추진 항목");
+  [["6", "달성", C.accent1, "부품 내구성·성능 지표\n전 항목 공인 달성"], ["4", "진행", C.accent4, "충전 유량·PCHE 시험 중\n에너지 지표 2단계 연속"]].forEach(([n, lab, col, sub], i) => {
+    const y = 1.55 + i * 2.4;
+    s.addShape(pres.shapes.RECTANGLE, { x: MX, y, w: 3.1, h: 2.25, fill: { color: C.background2 }, line: { color: CALLOUT_LINE, width: 0.75 } });
+    s.addText([{ text: n, options: { fontSize: 44, bold: true, color: col } }, { text: "  " + lab, options: { fontSize: 20, bold: true, color: C.text1 } }],
+      { x: MX, y: y + 0.15, w: 3.1, h: 1.1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addText(sub, { x: MX + 0.15, y: y + 1.25, w: 2.8, h: 0.85, fontSize: 13, color: C.text1, align: "center", valign: "top", margin: 0, isTextBox: true });
   });
   const tx = MX + 3.4, tw = CW - 3.4;
   GAPS.forEach(([a, , c], i) => {
     const y = 1.55 + i * 1.18;
-    s.addText(a, { shape: pres.shapes.RECTANGLE, x: tx, y, w: 3.0, h: 1.05, fill: { color: [C.accent2, C.accent3, C.accent4, C.accent4][i] }, fontSize: 15, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
-    s.addShape(pres.shapes.RECTANGLE, { x: tx + 3.0, y, w: tw - 3.0, h: 1.05, fill: { color: ROWBG }, line: { color: ROWBG, width: 0 } });
-    s.addText([{ text: "✓  ", options: { color: C.accent1, bold: true } }, { text: c }], { x: tx + 3.25, y, w: tw - 3.4, h: 1.05, fontSize: 15, color: C.text1, valign: "middle", margin: 0, isTextBox: true });
+    s.addText(a, { shape: pres.shapes.RECTANGLE, x: tx, y, w: 2.8, h: 1.05, fill: { color: [C.accent2, C.accent3, C.accent4, C.accent4][i] }, fontSize: 15, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addShape(pres.shapes.RECTANGLE, { x: tx + 2.8, y, w: tw - 2.8, h: 1.05, fill: { color: ROWBG }, line: { color: ROWBG, width: 0 } });
+    s.addText([{ text: "▶  ", options: { color: C.accent4, bold: true } }, { text: c, options: { bold: true, color: C.accent2 } }], { x: tx + 3.05, y, w: tw - 3.2, h: 1.05, fontSize: 15, valign: "middle", margin: 0, isTextBox: true });
   });
-  callout(s, pres, C, [["부품 내구성 지표 공인 달성 · 미달 항목 ", false], ["2단계 1차년도 내 보완", true]]);
+  callout(s, pres, C, [["부품 내구성 지표 공인 달성 · 진행 항목 ", false], ["2단계 1차년도에 이어서 완료", true]]);
   source(s, C, "출처: 단계보고서 p.291~293, 4장 p.312~314 · 성능지표 10개 기준");
   addNote(s, "f_perfgap");
 }
@@ -957,10 +996,10 @@ function fNext(pres, C, t) {
 // 6. 결론 ------------------------------------------------------------
 function sConclusion(pres, C, t, noteKey = "conclusion") {
   const s = contentSlide(pres, C, "결론", t, null);
-  const H = (x) => ({ text: x, options: { fontSize: 21, bold: true, color: C.text1, breakLine: true, paraSpaceBefore: 14 } });
+  const H = (x) => ({ text: x, options: { fontSize: 20, bold: true, color: C.text1, breakLine: true, paraSpaceBefore: 10 } });
   const line = (parts, code, lvl, last) => {
-    const runs = parts.map(([x, hl]) => ({ text: x, options: { fontSize: 18, color: hl ? C.accent1 : C.text1, bold: !!hl } }));
-    Object.assign(runs[0].options, { bullet: { code, indent: code === "2192" ? 24 : 18 }, indentLevel: lvl, paraSpaceBefore: 5 });
+    const runs = parts.map(([x, hl]) => ({ text: x, options: { fontSize: 17, color: hl ? C.accent1 : C.text1, bold: !!hl } }));
+    Object.assign(runs[0].options, { bullet: { code, indent: code === "2192" ? 24 : 18 }, indentLevel: lvl, paraSpaceBefore: 4 });
     if (!last) runs[runs.length - 1].options.breakLine = true;
     return runs;
   };
@@ -975,6 +1014,8 @@ function sConclusion(pres, C, t, noteKey = "conclusion") {
     ...B([["진단: 실제 중정비 고장 ", false], ["92일 전 사전 감지", true], [", 고장모드 148개 RPN 정량화", false]]),
     ...B([["효율: ", false], ["공인 기준선 9.5 kWh/kg 확정", true], [", 고효율 칠러 kg당 21.4% 절감", false]]),
     ...B([["실증: 인허가 완료 및 ", false], ["2단계 실증 설비동 조기 착공", true]]),
+    ...B([["성과: 정량지표 12개 중 ", false], ["10개 달성·9개 초과", true], ["(SCIE 280% · SW 560% · MOU 600%)", false]]),
+    ...B([["연계: 부품–완제품–충전소–시험평가 ", false], ["순환형 공동 고도화 구조", true], [" 구축", false]]),
     H("2단계 추진 방향"),
     ...B([["1단계 결과물의 충전소 현장 검증:", false]]),
     ...A([["[내구] 설비 패키지 ", false], ["내구성 1.5배 현장 검증", true]]),
@@ -1025,10 +1066,10 @@ function appendix(pres, C) {
 
   // A1 정오표
   let s = tableSlide(pres, C, "[Appendix] 정량 성과 정오표", "보고서 장별 수치 차이 및 발표 기준 수치",
-    ["항목", "요약문(p.6) · 4-3절(p.315)", "정량성과표(p.291) · 본문", "발표 기준"],
-    [["SCIE 논문", "16건, 320%", "14건(목표 5)", hl("14건")], ["국내 논문", "9건, 112%", "8건(목표 8)", hl("8건")],
+    ["항목", "요약문(p.6) · 4장(p.312, p.315)", "정량성과표(p.291) · 본문", "발표 기준"],
+    [["SCIE 논문", "16건, 320% · 200%(p.312)", "14건(목표 5)", hl("14건")], ["국내 논문", "9건, 112%", "8건(목표 8)", hl("8건")],
      ["SW 저작권", "29건, 580%", "28건(목표 5)", hl("28건")], ["특허 출원", "11건", "14건(p.297 목록)", hl("14건")],
-     ["사업화 매출", "3,022백만 원, 151%", "3,280백만 원(목표 2,000)", hl("3,280백만 원")], ["고용 창출", "31명, 194%", "35명(목표 16)", hl("35명")],
+     ["사업화 매출", "3,022백만 원, 151%", "3,280백만 원(목표 2,000)", hl("3,280백만 원")], ["고용 창출", "31명, 194% · 200%(p.312)", "35명(목표 16)", hl("35명")],
      ["총 연구비", "21,029,300천 원(요약문)", "19,617,800천 원(표지 연차별 표)", hl("[확인 필요]")], ["KTC 측정시간", "–", "144시간(p.67) / 4,144시간(성적서)", hl("약 4,100시간")],
      ["칠러 절감률", "약 21%(p.324)", "22%(p.36 캡션) · 78(p.34)", hl("21.4%(실측)")], ["성적서 캡션", "–", "‘기준치 대비 XXX%’(p.32)", hl("수정 필요")]],
     [2.3, 3.6, 4.0, 2.233], { rowH: 0.43, fontSize: 14 });
@@ -1063,7 +1104,7 @@ function appendix(pres, C) {
     panel(s, pres, C, x, 1.55, pw, 4.7, hd, col);
     addBullets(s, C, bl, x + 0.3, 2.15, pw - 0.45, 4.0, 14);
   });
-  callout(s, pres, C, [["직접 관련 7건 중심으로 답변", true], [" · 분류는 발표팀 확인 필요", false]]);
+  callout(s, pres, C, [["수소 분야 9건", true], [" (충전소 설비·운영 7 + 생산·운송 2) · 분류 [확인 필요]", false]]);
   source(s, C, "출처: 단계보고서 3-3절 p.293 논문 표 (분류는 논문 주제 기준 작성)");
   addNote(s, "a_paper");
 
@@ -1175,7 +1216,7 @@ async function buildMain() {
   pres.addSection({ title: "과제 개요" });
   sBackground(pres, C, "1. 과제 개요 (1/3)"); await sGoal(pres, C, "1. 과제 개요 (2/3)"); sOrg(pres, C, "1. 과제 개요 (3/3)");
   pres.addSection({ title: "1단계 추진 실적" });
-  await sSummary(pres, C, "2. 1단계 추진 실적 (1/3)"); sAchieve(pres, C, "2. 1단계 추진 실적 (2/3)"); sDashboard(pres, C, "2. 1단계 추진 실적 (3/3)");
+  await sSummary(pres, C, "2. 1단계 추진 실적 (1/4)"); sAchieve(pres, C, "2. 1단계 추진 실적 (2/4)"); sLinkage(pres, C, "2. 1단계 추진 실적 (3/4)", "1단계 추진 실적"); sDashboard(pres, C, "2. 1단계 추진 실적 (4/4)");
   pres.addSection({ title: "1단계 연구 결과" });
   sPiston(pres, C, "3. 1단계 연구 결과 (1/7)"); sDiaphragm(pres, C, "3. 1단계 연구 결과 (2/7)"); sDispenser(pres, C, "3. 1단계 연구 결과 (3/7)");
   sChiller(pres, C, "3. 1단계 연구 결과 (4/7)"); sDiag(pres, C, "3. 1단계 연구 결과 (5/7)", "1단계 연구 결과");
@@ -1193,7 +1234,7 @@ async function buildField() {
   const { pres, C } = makePres("현장평가판");
   pres.addSection({ title: "표지" }); sCover(pres, C, "field");
   pres.addSection({ title: "과제 개요" }); fOverview(pres, C, "1. 과제 개요");
-  pres.addSection({ title: "1단계 추진 실적" }); await fSummaryDash(pres, C, "2. 1단계 추진 실적");
+  pres.addSection({ title: "1단계 추진 실적" }); await fSummaryDash(pres, C, "2. 1단계 추진 실적 (1/2)"); sLinkage(pres, C, "2. 1단계 추진 실적 (2/2)", "1단계 추진 실적", "f_linkage");
   pres.addSection({ title: "1단계 연구 결과" });
   fDurability(pres, C, "3. 1단계 연구 결과 (1/3)"); sDiag(pres, C, "3. 1단계 연구 결과 (2/3)", "1단계 연구 결과", "f_diag"); fEfficiency(pres, C, "3. 1단계 연구 결과 (3/3)");
   pres.addSection({ title: "실증 인프라 및 성능지표" });
