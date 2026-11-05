@@ -33,6 +33,21 @@ async function dedupeParagraphProps(file) {
   return fixed;
 }
 
+
+// 테마 폰트의 한글(ea·Hang) 지정까지 넥슨Lv2고딕으로 맞춘다. (pptxgenjs·applyTheme는 영문 폰트만 바꾼다)
+async function fixThemeFonts(file) {
+  const zip = await JSZip.loadAsync(fs.readFileSync(file));
+  const face = THEME.headFontFace;
+  for (const n of Object.keys(zip.files).filter((x) => /^ppt\/theme\/theme\d+\.xml$/.test(x))) {
+    let xml = await zip.file(n).async("string");
+    xml = xml.replace(/(<a:(?:major|minor)Font>[\s\S]*?<\/a:(?:major|minor)Font>)/g, (seg) => seg
+      .replace(/<a:ea typeface="[^"]*"\s*\/>/, `<a:ea typeface="${face}"/>`)
+      .replace(/(<a:font script="Hang" typeface=")[^"]*(")/, `$1${face}$2`));
+    zip.file(n, xml);
+  }
+  fs.writeFileSync(file, await zip.generateAsync({ type: "nodebuffer", compression: "DEFLATE" }));
+}
+
 const ROOT = path.join(__dirname, "..");
 const FIG = (f) => (f.startsWith("fig") ? path.join(ROOT, "figures", f) : path.join(ROOT, "figures", "pdf", f));
 const TPL = (f) => path.join(__dirname, "template", f);
@@ -1074,9 +1089,9 @@ function appendix(pres, C) {
   panel(s, pres, C, MX, 1.55, w2, 4.7, "다이어프램 교체주기 비교 (가포 충전소 HP-A)");
   const H = (x) => ({ text: x, options: { bold: true, color: C.background1, fill: { color: C.accent3 }, align: "center" } });
   s.addTable([[H("구분"), H("기존품"), H("개발품")],
-    ["분석기간", "2025.07.08~09.15", "2025.10.17~2026.07.21"], ["교체이력", "3회", "3회"], ["평균 교체 운전시간", "117시간", "492.7시간(4.21배)"], ["최초 적용", "–", "1,025시간 운전"]]
+    ["분석기간", "2025.07.08\n~ 09.15", "2025.10.17\n~ 2026.07.21"], ["교체이력", "3회", "3회"], ["평균 교체\n운전시간", "117시간", "492.7시간(4.21배)"], ["최초 적용", "–", "1,025시간 운전"]]
     .map((r, i) => i === 0 ? r : r.map((c, k) => ({ text: c, options: { color: k === 2 ? C.accent1 : C.text1, bold: k === 2, align: k === 0 ? "left" : "center" } }))),
-    { x: MX + 0.2, y: 2.2, w: w2 - 0.4, colW: [1.5, (w2 - 1.9) * 0.42, (w2 - 1.9) * 0.58], rowH: 0.5, fontSize: 13, valign: "middle", border: { type: "solid", color: "D5DEE8", pt: 0.75 }, margin: [0, 0.08, 0, 0.08], fill: { color: HEX.lt1 } });
+    { x: MX + 0.2, y: 2.2, w: w2 - 0.4, colW: [1.5, (w2 - 1.9) * 0.42, (w2 - 1.9) * 0.58], rowH: [0.42, 0.62, 0.42, 0.62, 0.42], fontSize: 13, valign: "middle", border: { type: "solid", color: "D5DEE8", pt: 0.75 }, margin: [0, 0.08, 0, 0.08], fill: { color: HEX.lt1 } });
   addBullets(s, C, [[2, "후속 교체주기 단축 확인 → 범한산업과 원인 분석"], [2, "2단계 장기 실증으로 표본 확대"]], MX + 0.3, 4.75, w2 - 0.5, 1.3, 14);
   panel(s, pres, C, MX + w2 + 0.4, 1.55, w2, 4.7, "실증지 변경 (코하이젠)", C.accent3);
   addBullets(s, C, [
@@ -1150,6 +1165,7 @@ async function finish(pres, name) {
   await pres.writeFile({ fileName: f });
   console.log(name, "pPr 정리", await dedupeParagraphProps(f));
   await applyTheme(f, THEME);
+  await fixThemeFonts(f);
   return f;
 }
 async function buildMain() {
