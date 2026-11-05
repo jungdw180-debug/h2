@@ -6,7 +6,7 @@
   daily_h2_production_2025H2.csv     일별 수소 생산량(kg), 2025-07-01 ~ 2025-11-30
 
 분석 구간(2차년도): 2024-12-30 ~ 2025-10-26 (43주).
-타 충전소 비교(A/B), 베이스라인(22개소 통계), 대기전력 시뮬레이션 값은 원시 데이터가 없어 보고서 기재값을 사용.
+타 충전소 비교(A/B), 베이스라인 목표값, 대기전력 시뮬레이션 값은 원시 데이터가 없어 보고서 기재값을 사용.
 """
 import os
 
@@ -317,7 +317,7 @@ def fig13_boxplot_models():
 
 def fig14_baseline_target():
     fig, ax = plt.subplots(figsize=(6.8, 4.3))
-    ax.bar(["베이스라인\n(상용 22개소 통계)", "최종 목표\n(20% 절감)"], [9.5, 7.6], color=[GRAY, NAVY], width=0.5)
+    ax.bar(["베이스라인\n(사업대상지 실측, KTC 검증)", "최종 목표\n(20% 절감)"], [9.5, 7.6], color=[GRAY, NAVY], width=0.5)
     ax.text(0, 9.65, "9.5", ha="center", fontsize=14)
     ax.text(1, 7.75, "7.6", ha="center", fontsize=14)
     arrow(ax, (0.3, 9.3), (0.7, 7.85), color=ORANGE, lw=2)
