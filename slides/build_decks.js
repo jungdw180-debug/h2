@@ -246,7 +246,7 @@ const NOTES = {
   org: "추진체계입니다. 12개 기관이 부품, 설비, 충전소 세 층으로 구성되어 있습니다. 부품 기업이 핵심부품을 개선하면 설비 기업이 압축기, 충전기, 냉각기에 적용하고, 주관기관과 운영기관이 진단과 실증, 운영모델을 맡습니다. 정기 진도점검, 실증 충전소 세 곳, MOU 12건으로 협력했고, 구체적인 연계 실적은 뒤에서 따로 보여드리겠습니다.",
   summary: "1단계 결과를 네 가지로 요약하겠습니다. 첫째, 내구입니다. 고장이 잦던 핵심부품 네 가지를 개선해 공인시험에서 모두 1.5배 이상을 확인했고, 피스톤 씰은 3.3배입니다. 둘째, 진단입니다. 운전데이터로 실제 중정비 고장을 92일 전에 감지했습니다. 셋째, 효율입니다. 공인기관과 함께 에너지 기준선 9.5를 확정했고, 고효율 칠러로 충전 시 전력을 21.4% 줄였습니다. 넷째, 실증입니다. 인허가 세 건을 모두 받고 2단계 공사를 앞당겨 착공했습니다. 부품은 입증했고, 이를 충전소에서 검증할 준비가 끝났습니다.",
   achieve: "계획 대비 달성도입니다. 평가위원님들께서 연구개발계획서와 비교하실 수 있도록 개발 항목 기준으로 정리했습니다. 1단계 개발 항목은 1차년도 30개, 2차년도 29개, 3차년도 33개로 모두 92개이며, 전 항목을 완료했습니다. 분야별로는 분석·진단 16개, 압축기 26개, 냉각기 5개, 충전기 33개, 현장 실증 12개입니다. 오른쪽에 분야별 대표 산출물을 정리했고, 이어지는 연구 결과에서 자세히 말씀드리겠습니다.",
-  dashboard: "정량 성과입니다. 1단계 목표가 설정된 12개 지표 중 10개를 달성했고, 그중 9개는 목표를 넘었습니다. 별표로 표시한 6개 지표는 목표의 두 배 이상입니다. SCIE 논문 280%, SW 저작권 560%, MOU 600%, 사업화 233%, 고용 219%, 국가인증 200%입니다. 사업화 매출도 32억 8천만 원으로 목표 대비 164%입니다. 특허는 14건을 모두 출원했고 4건이 등록되었으며, 나머지 10건은 심사가 진행 중입니다. 기술실시는 2건을 계약했고, 실증 결과와 연계한 추가 이전을 진행하고 있습니다.",
+  dashboard: "정량 성과입니다. 1단계 목표가 설정된 12개 지표 중 10개를 달성했고, 그중 9개는 목표를 넘었습니다. 가장 진한 색으로 표시한 6개 지표는 목표의 두 배 이상입니다. SCIE 논문 280%, SW 저작권 560%, MOU 600%, 사업화 233%, 고용 219%, 국가인증 200%입니다. 사업화 매출도 32억 8천만 원으로 목표 대비 164%입니다. 특허는 14건을 모두 출원했고 4건이 등록되었으며, 나머지 10건은 심사가 진행 중입니다. 기술실시는 2건을 계약했고, 실증 결과와 연계한 추가 이전을 진행하고 있습니다.",
   piston: "지금부터 분야별 연구 결과입니다. 먼저 피스톤 압축기입니다. 피스톤 씰은 마모가 빨라 수소 보충과 정비가 잦은 부품이었습니다. 오른쪽 아래처럼 마모 해석으로 취약 부위를 확인한 뒤, 피스톤 소재를 A7075로 바꾸고 이중 스프링씰과 보조 씰 구조를 적용했습니다. 그 결과 공인시험에서 기준 300시간 대비 2025년 450시간, 2026년 1,000시간을 달성했습니다. 1단계 목표가 1.5배였는데 3.3배로 두 배 이상 넘었습니다. 이 씰을 적용한 신규 압축기 제작도 마쳐 2단계에 실증 설비동에 설치합니다.",
   diaphragm: "다음은 다이어프램 압축기입니다. 왼쪽은 시험실 결과입니다. 캐비티 형상을 최적화해 최대응력을 22.6% 낮췄고, PFA 코팅 다이어프램은 공인시험에서 1,561시간을 확인했습니다. 오른쪽은 현장 결과입니다. 가포 상용 충전소에 개발품을 먼저 적용했더니, 평균 교체 운전시간이 기존 117시간에서 492.7시간으로 4.21배 늘었습니다. 최초 적용품은 1,025시간까지 운전했습니다. 함께 개선한 릴리프밸브도 수명이 3개월에서 8개월 이상으로 늘었습니다. 시험실을 넘어 상용 충전소에서 효과를 확인한 사례입니다.",
   dispenser: "충전기 핵심부품입니다. 충전노즐의 IR 리시버는 영하 40도부터 상온까지 온도별 시험을 거쳐 공인시험에서 15,000사이클, 기준 대비 150%를 달성했습니다. 유량조절밸브는 96.3 MPa 작동시험 153,030회로 역시 150%를 달성했습니다. 특히 밸브는 계획보다 앞당겨 코하이젠 충전소에 설치해 10개월 동안 실제 차량 충전 1,672회를 문제없이 수행했고, 이미 충전기 제조사 두 곳에 세 기를 공급했습니다. 동시충전 듀얼 디스펜서는 시제품을 제작해 시운전했고, 120 g/s 공인시험은 11월에 진행합니다.",
@@ -267,7 +267,7 @@ const NOTES = {
   linkage: "이번 장은 기관들이 실제로 어떻게 맞물려 일했는지 보여드립니다. 위쪽은 대표 사례입니다. MT.H의 밸브 개선품을 MSENG 디스펜서에 붙이고, 코하이젠이 운영하는 충전소에 설치해, 한국자동차연구원 시험차량으로 충전 성능을 검증했습니다. 부품, 완제품, 충전소, 시험평가가 한 줄로 이어진 사례입니다. 아래 여섯 가지처럼 운영 데이터는 진단 알고리즘으로, 현장 데이터는 설계 개선으로 이어졌고, 개선 설비는 충주 실증 충전소로 모입니다. 실증 결과가 다시 제조사 설계로 돌아가는 순환 구조를 만든 것이 이 컨소시엄의 가장 큰 성과입니다.",
   // 현장평가판
   f_overview: "안녕하십니까. 현장에서 짧게 과제를 소개드리고 견학으로 이어가겠습니다. 국내 수소충전소 핵심설비는 고장이 잦습니다. 이 충전소에서도 다이어프램이 평균 117시간마다 교체됐고, 릴리프밸브는 석 달을 버티지 못했습니다. 왼쪽 아래 사진이 실제 고장 부품입니다. 또 수소 1킬로그램에 약 9.5 kWh를 쓰고, 국산 설비의 현장 실적이 부족합니다. 그래서 본 과제는 핵심부품과 설비 내구성 1.5배, 에너지 20% 절감, K-충전소 운영모델을 목표로 합니다. 12개 기관이 부품, 설비, 충전소로 연결되어 1단계에서는 개발과 체계 구축, 2단계에서는 현장 검증을 수행합니다.",
-  f_summary: "1단계 성과입니다. 위쪽 네 가지가 핵심입니다. 핵심부품 네 가지는 공인시험에서 1.5배 이상을 달성했고 피스톤 씰은 3.3배입니다. 이 충전소 데이터로 만든 이상감지 모델이 실제 중정비 고장을 92일 전에 감지했습니다. 공인기관과 함께 에너지 기준선 9.5를 확정했고, 실증 설비동을 앞당겨 착공했습니다. 아래는 정량지표입니다. 12개 중 10개를 달성했고 9개는 목표를 넘었으며, 별표 6개는 목표의 두 배 이상입니다. 특허와 기술실시는 심사와 이전이 진행 중입니다.",
+  f_summary: "1단계 성과입니다. 위쪽 네 가지가 핵심입니다. 핵심부품 네 가지는 공인시험에서 1.5배 이상을 달성했고 피스톤 씰은 3.3배입니다. 이 충전소 데이터로 만든 이상감지 모델이 실제 중정비 고장을 92일 전에 감지했습니다. 공인기관과 함께 에너지 기준선 9.5를 확정했고, 실증 설비동을 앞당겨 착공했습니다. 아래는 정량지표입니다. 12개 중 10개를 달성했고 9개는 목표를 넘었으며, 가장 진한 색 6개는 목표의 두 배 이상입니다. 특허와 기술실시는 심사와 이전이 진행 중입니다.",
   f_durability: "내구 성과를 표로 정리했습니다. 피스톤 씰은 공인시험에서 300시간에서 1,000시간으로 3.3배가 되었습니다. 다이어프램은 상용 충전소에서 교체주기가 117시간에서 492.7시간으로 4.21배 늘었습니다. IR 리시버는 15,000사이클, 유량조절밸브는 153,030회로 각각 1.5배를 달성했고, 밸브는 실제 충전소에서 10개월간 1,672회 충전했습니다. 고효율 칠러는 충전 1킬로그램당 전력을 21.4% 줄였습니다. 이 부품들의 실물과 성적서는 견학 4번 지점에서 직접 보여드리겠습니다.",
   f_diag: "진단 성과입니다. 이 충전소의 3년 운전·정비 데이터로 이상감지 모델을 만들었습니다. 2023년 12월 실제 중정비가 발생한 압축기 고장을 통계 모델은 92일 전, AI 모델은 41일 전에 감지했고, 다이어프램 사건도 며칠 앞서 경보를 냈습니다. 또 고장모드 148개의 위험도를 정량화해 고장대응 매뉴얼 세 종을 만들었습니다. 견학 1번 지점 모니터링 화면에서 실시간 전력과 진동 데이터를 보여드리겠습니다.",
   f_eff: "효율 성과입니다. 공인기관 입회로 이 충전소의 에너지 기준선을 수소 1킬로그램당 9.5 kWh로 확정했습니다. 그래프처럼 차량이 없는 밤에도 메인 칠러가 영하 40도를 유지하느라 전력을 쓰고 있었고, 칠러 전력량의 38.7%가 야간 대기에 쓰였습니다. 그래서 고효율 칠러로 교체하는 하드웨어 축과, 피크와 오프피크를 나눈 절전 운전 축으로 줄이겠습니다. 2단계에서 공인기관 입회로 충전소 단위 절감량을 검증합니다. 견학 2번 지점에서 이 칠러를 보여드리겠습니다.",
@@ -411,7 +411,7 @@ function sLinkage(pres, C, t, section, noteKey = "linkage") {
     const x = MX + i * (cw + ga);
     s.addText(org, { shape: pres.shapes.RECTANGLE, x, y: 1.92, w: cw, h: 0.44, fill: { color: [HEX.accent4, HEX.accent3, HEX.dk2, HEX.accent2][i] }, fontSize: 15, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
     s.addText(body, { shape: pres.shapes.RECTANGLE, x, y: 2.36, w: cw, h: 0.82, fill: { color: C.background2 }, line: { color: CALLOUT_LINE, width: 0.75 }, fontSize: 14, color: C.text1, align: "center", valign: "middle", margin: 4, isTextBox: true });
-    if (i < 3) s.addShape(pres.shapes.RIGHT_ARROW, { x: x + cw + 0.07, y: 2.42, w: ga - 0.14, h: 0.34, fill: { color: C.accent6 } });
+    if (i < 3) s.addShape(pres.shapes.RIGHT_ARROW, { x: x + cw + 0.07, y: 2.42, w: ga - 0.14, h: 0.34, fill: { color: "9DBEDA" } });
   });
   const links = [
     ["코하이젠 → 고등기술연구원", "운전·정비·고장이력 데이터 → 진단 알고리즘·조기경보"],
@@ -518,21 +518,37 @@ const DASH = [
   ["사업화 매출", "3,280", "2,000", "백만 원", 164, "over"], ["고용 창출", "35", "16", "명", 219, "big"], ["현장시험", "14", "10", "건", 140, "over"], ["시제품", "7", "5", "건", 140, "over"],
   ["MOU", "12", "2", "건", 600, "big"], ["국가인증", "2", "1", "건", 200, "big"], ["특허", "4+10", "등록 10", "건", 0, "prog", "등록 4 · 심사 중 10"], ["기술실시", "2", "4", "회", 0, "prog", "추가 이전 진행"],
 ];
+// 달성 수준별 명도 단계(같은 남색·파랑 계열): 200% 이상 → 100% 초과 → 100% → 진행 중
+const TIER = {
+  big: { card: "D5E5F1", num: HEX.accent2, fill: HEX.accent2, text: "FFFFFF", outline: false, label: "200% 이상" },
+  over: { card: "E7F2F8", num: HEX.accent1, fill: HEX.accent1, text: "FFFFFF", outline: false, label: "100% 초과" },
+  eq: { card: "F4F8FB", num: HEX.accent1, fill: "FFFFFF", text: HEX.accent1, outline: true, label: "100% 달성" },
+  prog: { card: "FFFFFF", num: "56697D", fill: "FFFFFF", text: "56697D", outline: true, label: "진행 중" },
+};
 function dashPill(s, pres, C, kind, rate, x, y, w, fs = 11) {
-  const map = { big: [C.accent6, C.background1, `★ ${rate}%`], over: [C.accent1, C.background1, `${rate}%`], eq: [C.background1, C.accent1, `${rate}%`], prog: [C.background1, C.accent4, "진행 중"] };
-  const [fill, color, text] = map[kind];
-  s.addText(text, { shape: pres.shapes.ROUNDED_RECTANGLE, x, y, w, h: 0.28, rectRadius: 0.14, fill: { color: fill }, line: kind === "eq" || kind === "prog" ? { color, width: 1 } : undefined, fontSize: fs, bold: true, color, align: "center", valign: "middle", margin: 0, isTextBox: true });
+  const t = TIER[kind];
+  s.addText(kind === "prog" ? "진행 중" : `${rate}%`, { shape: pres.shapes.ROUNDED_RECTANGLE, x, y, w, h: 0.28, rectRadius: 0.14, fill: { color: t.fill }, line: t.outline ? { color: t.text, width: 1 } : undefined, fontSize: fs, bold: true, color: t.text, align: "center", valign: "middle", margin: 0, isTextBox: true });
+}
+// 명도 범례(소제목 줄 오른쪽)
+function tierLegend(s, pres, C, xEnd = MX + CW, y = 1.04) {
+  const items = ["big", "over", "eq", "prog"], iw = 1.08;
+  items.forEach((k, i) => {
+    const t = TIER[k], x = xEnd - (items.length - i) * iw;
+    s.addShape(pres.shapes.RECTANGLE, { x, y: y + 0.07, w: 0.16, h: 0.16, fill: { color: t.outline ? "FFFFFF" : t.fill }, line: { color: t.outline ? t.text : t.fill, width: 1 } });
+    s.addText(t.label, { x: x + 0.21, y, w: iw - 0.24, h: 0.3, fontSize: 10.5, color: C.accent5, valign: "middle", margin: 0, isTextBox: true });
+  });
 }
 function sDashboard(pres, C, t) {
-  const s = contentSlide(pres, C, "1단계 추진 실적", t, "정량 성과: 12개 지표 중 10개 목표 달성 · 9개 초과 (★ 200% 이상 6개)");
+  const s = contentSlide(pres, C, "1단계 추진 실적", t, "정량 성과: 12개 지표 중 10개 목표 달성 · 9개 초과");
+  tierLegend(s, pres, C);
   const cols = 6, g = 0.16, w = (CW - g * (cols - 1)) / cols, h = 2.18;
   DASH.forEach(([lab, a, tg, u, rate, kind, note], i) => {
     const x = MX + (i % cols) * (w + g), y = 1.6 + Math.floor(i / cols) * (h + g);
-    const big = kind === "big", prog = kind === "prog";
-    s.addShape(pres.shapes.RECTANGLE, { x, y, w, h, fill: { color: prog ? C.background1 : C.background2 }, line: { color: big ? HEX.accent6 : prog ? HEX.accent4 : CALLOUT_LINE, width: big ? 1.5 : 0.75 } });
-    s.addText(lab, { shape: pres.shapes.RECTANGLE, x, y, w, h: 0.42, fill: { color: prog ? C.accent4 : C.text2 }, fontSize: 14, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
-    s.addText(a, { x: x + 0.1, y: y + 0.5, w: w - 0.2, h: 0.75, fontSize: a.length > 3 ? 30 : 36, bold: true, color: big ? C.accent6 : prog ? C.accent4 : C.accent1, align: "center", valign: "middle", margin: 0, isTextBox: true });
-    s.addText(prog ? note : `목표 ${tg} ${u}`, { x: x + 0.1, y: y + 1.28, w: w - 0.2, h: 0.3, fontSize: prog ? 12 : 13, bold: prog, color: prog ? C.accent4 : C.accent5, align: "center", margin: 0, isTextBox: true });
+    const prog = kind === "prog", tr = TIER[kind];
+    s.addShape(pres.shapes.RECTANGLE, { x, y, w, h, fill: { color: tr.card }, line: { color: prog ? BORDER : CALLOUT_LINE, width: 0.75 } });
+    s.addText(lab, { shape: pres.shapes.RECTANGLE, x, y, w, h: 0.42, fill: { color: C.text2 }, fontSize: 14, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addText(a, { x: x + 0.1, y: y + 0.5, w: w - 0.2, h: 0.75, fontSize: a.length > 3 ? 30 : 36, bold: true, color: tr.num, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addText(prog ? note : `목표 ${tg} ${u}`, { x: x + 0.1, y: y + 1.28, w: w - 0.2, h: 0.3, fontSize: prog ? 12 : 13, bold: prog, color: prog ? tr.num : C.accent5, align: "center", margin: 0, isTextBox: true });
     if (prog) s.addText(`목표 ${tg}${u === "회" ? "회" : "건"}`, { x: x + 0.1, y: y + 1.55, w: w - 0.2, h: 0.24, fontSize: 11, color: C.accent5, align: "center", margin: 0, isTextBox: true });
     dashPill(s, pres, C, kind, rate, x + w / 2 - 0.55, y + 1.82, 1.1);
   });
@@ -543,6 +559,7 @@ function sDashboard(pres, C, t) {
 
 async function fSummaryDash(pres, C, t) {
   const s = contentSlide(pres, C, "1단계 추진 실적", t, "1단계 성과 요약 및 정량 성과 초과 달성");
+  tierLegend(s, pres, C);
   const w = (CW - 0.6) / 4;
   for (let i = 0; i < 4; i++) {
     const [ic, lab, big, unit, items] = SUMMARY_CARDS[i];
@@ -555,15 +572,15 @@ async function fSummaryDash(pres, C, t) {
   }
   const cols = 6, g = 0.12, mw = (CW - g * (cols - 1)) / cols, mh = 0.82;
   DASH.forEach(([lab, a, tg, u, rate, kind], i) => {
-    const big = kind === "big", prog = kind === "prog";
+    const prog = kind === "prog", tr = TIER[kind];
     const x = MX + (i % cols) * (mw + g), y = 4.55 + Math.floor(i / cols) * (mh + 0.1);
-    s.addShape(pres.shapes.RECTANGLE, { x, y, w: mw, h: mh, fill: { color: prog ? C.background1 : C.background2 }, line: { color: big ? HEX.accent6 : prog ? HEX.accent4 : CALLOUT_LINE, width: big ? 1.5 : 0.75 } });
-    s.addText(lab, { x: x + 0.1, y: y + 0.05, w: mw - 0.2, h: 0.3, fontSize: 12, bold: true, color: prog ? C.accent4 : C.text2, margin: 0, isTextBox: true });
-    s.addText([{ text: a, options: { fontSize: 20, bold: true, color: big ? C.accent6 : prog ? C.accent4 : C.accent1 } }, { text: ` / ${tg}`, options: { fontSize: 12, color: C.accent5 } }],
+    s.addShape(pres.shapes.RECTANGLE, { x, y, w: mw, h: mh, fill: { color: tr.card }, line: { color: prog ? BORDER : CALLOUT_LINE, width: 0.75 } });
+    s.addText(lab, { x: x + 0.1, y: y + 0.05, w: mw - 0.2, h: 0.3, fontSize: 12, bold: true, color: C.text2, margin: 0, isTextBox: true });
+    s.addText([{ text: a, options: { fontSize: 20, bold: true, color: tr.num } }, { text: ` / ${tg}`, options: { fontSize: 12, color: C.accent5 } }],
       { x: x + 0.1, y: y + 0.36, w: mw - 0.2, h: 0.42, valign: "middle", margin: 0, isTextBox: true });
     dashPill(s, pres, C, kind, rate, x + mw - 0.92, y + 0.06, 0.82, 10);
   });
-  callout(s, pres, C, [["정량지표 12개 중 ", false], ["10개 목표 달성(9개 초과)", true], [" · ★ 200% 이상 6개 · 특허·기술실시 진행 중", false]]);
+  callout(s, pres, C, [["정량지표 12개 중 ", false], ["10개 목표 달성(9개 초과)", true], [" · 200% 이상 6개 · 특허·기술실시 진행 중", false]]);
   source(s, C, "출처: 단계보고서 p.12, p.13, p.22, p.36, p.291 · 수치는 실적 / 1단계 목표");
   addNote(s, "f_summary");
 }
